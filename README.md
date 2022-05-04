@@ -2,19 +2,19 @@
 Gives diversity information
 
 
-Diversity parameters: </br>
- private int id; 
-    private String gender;
-    private String nationality;
-    private String religion;
-    private String maritialStatus;
-    private String sexualOrientation;
-    private String politicalOrientation;
-    private Enums.Color color;
-    private String language;
-    private boolean isLgbt;
-    private boolean isVeteran;
-    private boolean isDisable;
-    private long salary;
+Diversity parameters: </br> 
+ private int id; </br>
+    private String gender; </br>
+    private String nationality; </br>
+    private String religion; </br>
+    private String maritialStatus; </br>
+    private String sexualOrientation; </br>
+    private String politicalOrientation; </br>
+    private Enums.Color color; </br>
+    private String language; </br>
+    private boolean isLgbt;</br>
+    private boolean isVeteran;</br>
+    private boolean isDisable;</br>
+    private long salary;</br>
     
     //Please feel free to add/modify the list.
