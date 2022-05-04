@@ -2,8 +2,8 @@
 Gives diversity information
 
 
-Diversity parameters:
- private int id;
+Diversity parameters: </br>
+ private int id; 
     private String gender;
     private String nationality;
     private String religion;
