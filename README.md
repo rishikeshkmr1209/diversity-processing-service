@@ -8,6 +8,13 @@ Gives diversity information
 
 .\gradlew.bat bootRun
 
+# Database
+
+H2 database has been enabled </br>
+http://localhost:9000/h2
+
+
+
 # See the APIs at:
 
 http://localhost:9000/swagger-ui/
