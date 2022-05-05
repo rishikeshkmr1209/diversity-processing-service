@@ -61,8 +61,7 @@ public class DiversityService {
     }
 
     public void updateLeaderDiversityInformation(LeaderDiversityInfoDto leaderDiversityInfo) {
-        DtoToEntity.mapLeaderDiversityInfoDtoToEntity(leaderDiversityInfo);
-        leaderDiversityInfoRepository.save(leaderDiversityInfo);
+        leaderDiversityInfoRepository.save( DtoToEntity.mapLeaderDiversityInfoDtoToEntity(leaderDiversityInfo));
 
     }
 
