@@ -1,31 +1,36 @@
-package com.diversity.model;
+package com.diversity.entity;
 
-import com.diversity.entity.Diversity;
+import javax.persistence.Entity;
+import javax.persistence.Table;
+import java.util.List;
 
-public class LeaderDiversityInfoDto {
+@Entity
+@Table
+public class CompanyDiversityInfo {
+
 
     private Integer id;
-    private String name;
     private String companyName;
+    private List<String> leaders;
     private String mobileNumber;
     private String emailId;
-    private Diversity diversity;
-    public LeaderDiversityInfoDto(){}
 
-    public LeaderDiversityInfoDto(String name, String companyName, String mobileNumber, String emailId, Diversity diversity) {
-        this.name = name;
+    public CompanyDiversityInfo() {
+    }
+
+    public CompanyDiversityInfo(String companyName, List<String> leaders, String mobileNumber, String emailId) {
         this.companyName = companyName;
+        this.leaders = leaders;
         this.mobileNumber = mobileNumber;
         this.emailId = emailId;
-        this.diversity = diversity;
     }
 
-    public String getName() {
-        return name;
+    public Integer getId() {
+        return id;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setId(Integer id) {
+        this.id = id;
     }
 
     public String getCompanyName() {
@@ -52,31 +57,23 @@ public class LeaderDiversityInfoDto {
         this.emailId = emailId;
     }
 
-    public Diversity getDiversity() {
-        return diversity;
+    public List<String> getLeaders() {
+        return leaders;
     }
 
-    public void setDiversity(Diversity diversity) {
-        this.diversity = diversity;
-    }
-
-    public Integer getId() {
-        return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
+    public void setLeaders(List<String> leaders) {
+        this.leaders = leaders;
     }
 
     @Override
     public String toString() {
-        return "LeaderDiversityInfoDto{" +
+        return "CompanyDiversityInfoDto{" +
                 "id=" + id +
-                ", name='" + name + '\'' +
                 ", companyName='" + companyName + '\'' +
+                ", leaders=" + leaders +
                 ", mobileNumber='" + mobileNumber + '\'' +
                 ", emailId='" + emailId + '\'' +
-                ", diversity=" + diversity +
                 '}';
     }
+
 }

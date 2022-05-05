@@ -1,6 +1,8 @@
 package com.diversity.service;
 
 import com.diversity.entity.Employee;
+import com.diversity.mapper.DtoToEntity;
+import com.diversity.model.CompanyDiversityInfoDto;
 import com.diversity.model.EmployeeDto;
 import com.diversity.model.LeaderDiversityInfoDto;
 import com.diversity.repo.EmployeeRepository;
@@ -59,8 +61,13 @@ public class DiversityService {
     }
 
     public void updateLeaderDiversityInformation(LeaderDiversityInfoDto leaderDiversityInfo) {
-
+        DtoToEntity.mapLeaderDiversityInfoDtoToEntity(leaderDiversityInfo);
         leaderDiversityInfoRepository.save(leaderDiversityInfo);
+
+    }
+
+
+    public void updateCompanyDiversityInformation(CompanyDiversityInfoDto companyDiversityInfoDto) {
 
     }
 }

@@ -1,5 +1,6 @@
 package com.diversity.controller;
 
+import com.diversity.model.CompanyDiversityInfoDto;
 import com.diversity.model.EmployeeDto;
 import com.diversity.model.LeaderDiversityInfoDto;
 import com.diversity.service.DiversityService;
@@ -31,6 +32,14 @@ public class DiversityController {
     public ResponseEntity<String> updateLeaderDiversityInformation(@RequestBody LeaderDiversityInfoDto leaderDiversityInfo) {
 
         service.updateLeaderDiversityInformation(leaderDiversityInfo);
+        return new ResponseEntity<>(HttpStatus.CREATED);
+
+    }
+
+    @PostMapping("/company-diversity")
+    public ResponseEntity<String> updateCompanyDiversityInformation(@RequestBody CompanyDiversityInfoDto companyDiversityInfoDto) {
+
+        service.updateCompanyDiversityInformation(companyDiversityInfoDto);
         return new ResponseEntity<>(HttpStatus.CREATED);
 
     }
