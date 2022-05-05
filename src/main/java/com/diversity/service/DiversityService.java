@@ -25,6 +25,9 @@ public class DiversityService {
     public EmployeeDto addEmployee(@RequestBody EmployeeDto employeeDto) {
         System.out.println("Inside addEmployee: " + employeeDto);
         Employee employee = repository.save(convertDtoToEntity(employeeDto));
+       /* Employee employee=new Employee();
+        employee.setDept("IT");*/
+
         System.out.println("addEmployee: "+employee);
         return convertEntityToDto(employee);
 

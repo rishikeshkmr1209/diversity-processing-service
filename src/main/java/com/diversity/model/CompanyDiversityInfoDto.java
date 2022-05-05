@@ -1,30 +1,37 @@
 package com.diversity.model;
 
 
+import com.diversity.entity.LeaderDiversityInfo;
+
+import javax.persistence.CascadeType;
+import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import java.util.List;
+import java.util.Set;
 
-public class CompanyDiversityInfoDto {
-
-    private Integer id;
+public class CompanyDiversityInfoDto
+{
+    private Long id;
     private String companyName;
-    private List<String> leaders;
+    private Set<LeaderDiversityInfo> leaders;
     private String mobileNumber;
     private String emailId;
 
-    public CompanyDiversityInfoDto(){}
+    public CompanyDiversityInfoDto() {
+    }
 
-    public CompanyDiversityInfoDto(String companyName, List<String> leaders, String mobileNumber, String emailId) {
+    public CompanyDiversityInfoDto(String companyName, Set<LeaderDiversityInfo> leaders, String mobileNumber, String emailId) {
         this.companyName = companyName;
         this.leaders = leaders;
         this.mobileNumber = mobileNumber;
         this.emailId = emailId;
     }
 
-    public Integer getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
@@ -34,6 +41,14 @@ public class CompanyDiversityInfoDto {
 
     public void setCompanyName(String companyName) {
         this.companyName = companyName;
+    }
+
+    public Set<LeaderDiversityInfo> getLeaders() {
+        return leaders;
+    }
+
+    public void setLeaders(Set<LeaderDiversityInfo> leaders) {
+        this.leaders = leaders;
     }
 
     public String getMobileNumber() {
@@ -52,17 +67,9 @@ public class CompanyDiversityInfoDto {
         this.emailId = emailId;
     }
 
-    public List<String> getLeaders() {
-        return leaders;
-    }
-
-    public void setLeaders(List<String> leaders) {
-        this.leaders = leaders;
-    }
-
     @Override
     public String toString() {
-        return "CompanyDiversityInfoDto{" +
+        return "CompanyDiversityInfo{" +
                 "id=" + id +
                 ", companyName='" + companyName + '\'' +
                 ", leaders=" + leaders +

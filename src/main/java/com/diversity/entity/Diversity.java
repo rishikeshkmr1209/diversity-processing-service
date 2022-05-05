@@ -7,10 +7,11 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-@Entity
-@Table
+//@Entity
+//@Table
+/*
 public class Diversity{
-        //racial, national, tribal, religious, linguistic, or cultural origin or background.
+
     @Id
     @GeneratedValue
     private int id;
@@ -168,4 +169,4 @@ public class Diversity{
                 ", salary=" + salary +
                 '}';
     }
-}
+}*/

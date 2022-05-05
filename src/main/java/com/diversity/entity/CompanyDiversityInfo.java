@@ -1,35 +1,36 @@
 package com.diversity.entity;
 
-import javax.persistence.Entity;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.util.List;
+import java.util.Set;
 
 @Entity
 @Table
 public class CompanyDiversityInfo {
-
-
-    private Integer id;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
     private String companyName;
-    private List<String> leaders;
+    @OneToMany(cascade = CascadeType.ALL)
+    private Set<LeaderDiversityInfo> leaders;
     private String mobileNumber;
     private String emailId;
 
     public CompanyDiversityInfo() {
     }
 
-    public CompanyDiversityInfo(String companyName, List<String> leaders, String mobileNumber, String emailId) {
+    public CompanyDiversityInfo(String companyName, Set<LeaderDiversityInfo> leaders, String mobileNumber, String emailId) {
         this.companyName = companyName;
         this.leaders = leaders;
         this.mobileNumber = mobileNumber;
         this.emailId = emailId;
     }
 
-    public Integer getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
@@ -39,6 +40,14 @@ public class CompanyDiversityInfo {
 
     public void setCompanyName(String companyName) {
         this.companyName = companyName;
+    }
+
+    public Set<LeaderDiversityInfo> getLeaders() {
+        return leaders;
+    }
+
+    public void setLeaders(Set<LeaderDiversityInfo> leaders) {
+        this.leaders = leaders;
     }
 
     public String getMobileNumber() {
@@ -57,17 +66,9 @@ public class CompanyDiversityInfo {
         this.emailId = emailId;
     }
 
-    public List<String> getLeaders() {
-        return leaders;
-    }
-
-    public void setLeaders(List<String> leaders) {
-        this.leaders = leaders;
-    }
-
     @Override
     public String toString() {
-        return "CompanyDiversityInfoDto{" +
+        return "CompanyDiversityInfo{" +
                 "id=" + id +
                 ", companyName='" + companyName + '\'' +
                 ", leaders=" + leaders +
@@ -75,5 +76,4 @@ public class CompanyDiversityInfo {
                 ", emailId='" + emailId + '\'' +
                 '}';
     }
-
 }

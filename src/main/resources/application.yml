@@ -1,14 +1,22 @@
+
 spring:
-  datasource:
-    url: jdbc:sqlserver://diversityserver.database.windows.net:1433;database=diversitystorage;encrypt=true;trustServerCertificate=false;hostNameInCertificate=*.database.windows.net;loginTimeout=30;
-    username: diversityuser
-    password: password@123
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
   jpa:
     show-sql: true
     hibernate:
       ddl-auto: update
-      dialect : org.hibernate.dialect.SQLServer2012Dialect
 
 server:
   port: 9000
 
+app:
+  name: spring boot application
+  api:
+    title: Spring Boot APIs
+    version: 1.0.0
+    description: Spring Boot APIs description
+    base-package: com.diversity.controller
+    swagger:
+      enable: true

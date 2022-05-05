@@ -12,7 +12,6 @@ public  class DtoToEntity {
       leaderDiversityInfo.setCompanyName(leaderDiversityInfoDto.getCompanyName());
       leaderDiversityInfo.setEmailId(leaderDiversityInfoDto.getEmailId());
       leaderDiversityInfo.setMobileNumber(leaderDiversityInfoDto.getMobileNumber());
-      leaderDiversityInfo.setDiversity(leaderDiversityInfoDto.getDiversity());
       return  leaderDiversityInfo;
     }
 
