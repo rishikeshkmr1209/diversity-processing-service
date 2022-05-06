@@ -1,6 +1,25 @@
 # diversity-processing-service
 Gives diversity information
 
+# To build:
+.\gradlew.bat clean build 
+
+# To run
+
+.\gradlew.bat bootRun
+
+# Database
+
+H2 database has been enabled </br>
+http://localhost:9000/h2
+
+
+
+# See the APIs at:
+
+http://localhost:9000/swagger-ui/
+
+
 
 Diversity parameters: </br> 
  private int id; </br>
@@ -15,6 +34,6 @@ Diversity parameters: </br>
     private boolean isLgbt;</br>
     private boolean isVeteran;</br>
     private boolean isDisable;</br>
-    private long salary;</br>
+   
     
     //Please feel free to add/modify the list.
