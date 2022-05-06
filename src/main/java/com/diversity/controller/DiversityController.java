@@ -31,13 +31,13 @@ public class DiversityController {
 
     }
 
-    @PostMapping("/leader-diversity")
+/*    @PostMapping("/leader-diversity")
     public ResponseEntity<String> updateLeaderDiversityInformation(@RequestBody LeaderDiversityInfoDto leaderDiversityInfo) {
 
         service.updateLeaderDiversityInformation(leaderDiversityInfo);
         return new ResponseEntity<>(HttpStatus.CREATED);
 
-    }
+    }*/
 
     @PostMapping("/company-diversity")
     public ResponseEntity<String> updateCompanyDiversityInformation(@RequestBody CompanyDiversityInfoDto companyDiversityInfoDto) {

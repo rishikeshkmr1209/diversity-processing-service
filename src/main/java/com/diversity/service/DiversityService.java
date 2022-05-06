@@ -48,10 +48,10 @@ public class DiversityService {
     }
 
 
-    public void updateLeaderDiversityInformation(LeaderDiversityInfoDto leaderDiversityInfo) {
+   /* public void updateLeaderDiversityInformation(LeaderDiversityInfoDto leaderDiversityInfo) {
         leaderDiversityInfoRepository.save(DtoToEntity.mapLeaderDiversityInfoDtoToEntity(leaderDiversityInfo));
 
-    }
+    }*/
 
 
     public void updateCompanyDiversityInformation(CompanyDiversityInfoDto companyDiversityInfoDto) {
