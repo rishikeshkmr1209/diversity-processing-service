@@ -8,7 +8,8 @@ import com.diversity.model.CompanyDiversityInfoDto;
 import com.diversity.model.LeaderDiversityInfoDto;
 import com.diversity.repo.LeaderDiversityInfoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.A;
+import org.springframework.stereotype.Service;
+
 import java.util.List;
 @Service
 public class DiversityLeaderService {
