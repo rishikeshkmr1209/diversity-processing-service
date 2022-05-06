@@ -27,7 +27,7 @@ public class DiversityLeaderService {
     }
 
     public LeaderDiversityInfoDto getLeaderByName(String leaderName) {
-        LeaderDiversityInfo diversityLeaderInfo = leaderDiversityInfoRepository.findByLeaderName(leaderName);
+        LeaderDiversityInfo diversityLeaderInfo = leaderDiversityInfoRepository.findByName(leaderName);
         return EntityToDto.mapLeaderDiversityEntityToDto(diversityLeaderInfo);
     }
 

@@ -7,6 +7,5 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface LeaderDiversityInfoRepository extends JpaRepository<LeaderDiversityInfo,Integer> {
-
-    LeaderDiversityInfo findByLeaderName(String companyName);
+    LeaderDiversityInfo findByName(String name);
 }
