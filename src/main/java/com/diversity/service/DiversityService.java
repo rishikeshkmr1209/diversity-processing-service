@@ -26,6 +26,7 @@ public class DiversityService {
     @Autowired
     private LeaderDiversityInfoRepository leaderDiversityInfoRepository;
 
+    @Autowired
     private CompanyDiversityInfoRepository companyDiversityInfoRepository;
 
     public EmployeeDto addEmployee(@RequestBody EmployeeDto employeeDto) {
