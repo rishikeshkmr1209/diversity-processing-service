@@ -20,11 +20,6 @@ public class DiversityLeaderService {
         leaderDiversityInfoRepository.save(DtoToEntity.mapLeaderDiversityInfoDtoToEntity(leaderDiversityInfo));
 
     }
-    public List<LeaderDiversityInfoDto> getAllCompanies() {
-        List<LeaderDiversityInfo> diversityLeaderInfo = leaderDiversityInfoRepository.findAll();
-
-        return EntityToDto.mapListLeaderDiversityEntityToDto(diversityLeaderInfo);
-    }
 
     public LeaderDiversityInfoDto getLeaderByName(String leaderName) {
         LeaderDiversityInfo diversityLeaderInfo = leaderDiversityInfoRepository.findByName(leaderName);

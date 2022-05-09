@@ -1,14 +1,10 @@
 package com.diversity.mapper;
 
 import com.diversity.entity.CompanyDiversityInfo;
-import com.diversity.entity.Employee;
 import com.diversity.entity.LeaderDiversityInfo;
 import com.diversity.model.CompanyDiversityInfoDto;
 import com.diversity.model.EmployeeDto;
 import com.diversity.model.LeaderDiversityInfoDto;
-
-import javax.persistence.*;
-import java.util.Set;
 
 public class DtoToEntity {
     public static LeaderDiversityInfo mapLeaderDiversityInfoDtoToEntity(LeaderDiversityInfoDto leaderDiversityInfoDto) {
@@ -43,14 +39,6 @@ public class DtoToEntity {
         }
 
         return companyDiversityInfo;
-    }
-
-    public static Employee convertDtoToEntity(EmployeeDto employee) {
-        Employee emp = new Employee();
-        emp.setName(employee.getName());
-        emp.setSalary(employee.getSalary());
-        emp.setDept(employee.getDept());
-        return emp;
     }
 
 
