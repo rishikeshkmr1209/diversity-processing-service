@@ -17,7 +17,7 @@ INSERT INTO TBL_DIV_LEADER
                             DISABLED
                             )
 
-VALUES(
+                     VALUES(
                             "Gwenn Morris",
                             "ABC Technologies",
                             1234567890,

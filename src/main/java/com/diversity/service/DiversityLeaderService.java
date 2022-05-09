@@ -1,10 +1,10 @@
 package com.diversity.service;
 
-import com.diversity.entity.CompanyDiversityInfo;
+import com.diversity.exception.RecordNotFoundException;
+import com.diversity.exception.Constants;
 import com.diversity.entity.LeaderDiversityInfo;
 import com.diversity.mapper.DtoToEntity;
 import com.diversity.mapper.EntityToDto;
-import com.diversity.model.CompanyDiversityInfoDto;
 import com.diversity.model.LeaderDiversityInfoDto;
 import com.diversity.repo.LeaderDiversityInfoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,22 +17,30 @@ public class DiversityLeaderService {
     private LeaderDiversityInfoRepository leaderDiversityInfoRepository;
 
     public void updateLeaderDiversityInformation(LeaderDiversityInfoDto leaderDiversityInfo) {
+        if(leaderDiversityInfo==null)
+            throw new RecordNotFoundException(Constants.MSG_RECORD_NOT_FOUND);
         leaderDiversityInfoRepository.save(DtoToEntity.mapLeaderDiversityInfoDtoToEntity(leaderDiversityInfo));
 
     }
-    public List<LeaderDiversityInfoDto> getAllCompanies() {
+/*    public List<LeaderDiversityInfoDto> getAllLeaders() {
         List<LeaderDiversityInfo> diversityLeaderInfo = leaderDiversityInfoRepository.findAll();
-
+        if(diversityLeaderInfo==null)
+            throw new RecordNotFoundException(Constants.MSG_RECORD_NOT_FOUND);
         return EntityToDto.mapListLeaderDiversityEntityToDto(diversityLeaderInfo);
-    }
+    }*/
 
     public LeaderDiversityInfoDto getLeaderByName(String leaderName) {
+
         LeaderDiversityInfo diversityLeaderInfo = leaderDiversityInfoRepository.findByName(leaderName);
+        if(diversityLeaderInfo==null)
+           throw new RecordNotFoundException(Constants.MSG_RECORD_NOT_FOUND);
         return EntityToDto.mapLeaderDiversityEntityToDto(diversityLeaderInfo);
     }
 
     public List<LeaderDiversityInfoDto> getAllDiversityLeaders() {
         List<LeaderDiversityInfo> diversityLeaders = leaderDiversityInfoRepository.findAll();
+        if(diversityLeaders.isEmpty())
+            throw new RecordNotFoundException(Constants.MSG_RECORD_NOT_FOUND);
 
         return EntityToDto.mapListLeaderDiversityEntityToDto(diversityLeaders);
     }

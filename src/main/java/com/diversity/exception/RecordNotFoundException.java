@@ -1,4 +1,4 @@
-package com.diversity.Exception;
+package com.diversity.exception;
 
 public class RecordNotFoundException extends RuntimeException{
 

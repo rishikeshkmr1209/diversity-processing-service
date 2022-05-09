@@ -1,4 +1,4 @@
-package com.diversity.Exception;
+package com.diversity.exception;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ControllerAdvice;
@@ -12,7 +12,9 @@ public class DiversityExceptionHandler {
     @ResponseStatus(HttpStatus.NOT_FOUND)
     public DiversityErrorResponse handleRecordNotFoundException(RecordNotFoundException ex)
     {
+        System.out.print("Error");
         return new DiversityErrorResponse(HttpStatus.NOT_FOUND.value(),
                 ex.getMessage());
+
     }
 }
