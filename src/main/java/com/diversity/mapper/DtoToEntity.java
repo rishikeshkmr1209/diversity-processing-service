@@ -5,8 +5,13 @@ import com.diversity.entity.LeaderDiversityInfo;
 import com.diversity.model.CompanyDiversityInfoDto;
 import com.diversity.model.EmployeeDto;
 import com.diversity.model.LeaderDiversityInfoDto;
+import com.diversity.service.DiversityService;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class DtoToEntity {
+
+    Logger logger = LoggerFactory.getLogger(DtoToEntity.class);
     public static LeaderDiversityInfo mapLeaderDiversityInfoDtoToEntity(LeaderDiversityInfoDto leaderDiversityInfoDto) {
         LeaderDiversityInfo leaderDiversityInfo = new LeaderDiversityInfo();
         leaderDiversityInfo.setName(leaderDiversityInfoDto.getName());

@@ -11,8 +11,6 @@ import java.util.List;
 
 public class EntityToDto {
 
-
-
     public static List<CompanyDiversityInfoDto> mapListCompanyDiversityEntityToDto(List<CompanyDiversityInfo> companyDiversityInfos) {
         List<CompanyDiversityInfoDto> companyDiversityInfoDtos = new ArrayList<>();
         for (CompanyDiversityInfo companyDiversityInfo : companyDiversityInfos) {
