@@ -1,6 +1,8 @@
 package com.diversity.service;
 
 import com.diversity.entity.CompanyDiversityInfo;
+import com.diversity.exception.Constants;
+import com.diversity.exception.RecordNotFoundException;
 import com.diversity.mapper.DtoToEntity;
 import com.diversity.mapper.EntityToDto;
 import com.diversity.model.CompanyDiversityInfoDto;
@@ -25,18 +27,23 @@ public class DiversityService {
     private CompanyDiversityInfoRepository companyDiversityInfoRepository;
 
     public void updateCompanyDiversityInformation(CompanyDiversityInfoDto companyDiversityInfoDto) {
+        if(companyDiversityInfoDto == null)
+            throw new RecordNotFoundException(Constants.MSG_RECORD_NOT_FOUND);
         CompanyDiversityInfo companyDiversityInfo=DtoToEntity.mapCompanyDiversityInfoDtoToEntity(companyDiversityInfoDto);
             companyDiversityInfoRepository.save(companyDiversityInfo);
     }
 
     public List<CompanyDiversityInfoDto> getAllCompanies() {
         List<CompanyDiversityInfo> companyDiversityInfos = companyDiversityInfoRepository.findAll();
-
+        if(companyDiversityInfos.isEmpty())
+             throw new RecordNotFoundException(Constants.MSG_RECORD_NOT_FOUND);
         return EntityToDto.mapListCompanyDiversityEntityToDto(companyDiversityInfos);
     }
 
     public CompanyDiversityInfoDto getCompanyByName(String companyName) {
         CompanyDiversityInfo companyDiversityInfo = companyDiversityInfoRepository.findByCompanyName(companyName);
+        if(companyDiversityInfo == null)
+            throw new RecordNotFoundException(Constants.MSG_RECORD_NOT_FOUND);
         return EntityToDto.mapCompanyDiversityEntityToDto(companyDiversityInfo);
     }
 }
