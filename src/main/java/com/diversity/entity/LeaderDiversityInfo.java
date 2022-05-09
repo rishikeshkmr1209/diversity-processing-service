@@ -5,26 +5,42 @@ import com.diversity.enums.Enums;
 import javax.persistence.*;
 
 @Entity
-@Table
+@Table (name= "TBL_DIV_LEADER")
 public class LeaderDiversityInfo {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
+    @Column(name="NAME")
     private String name;
+    @Column(name="COMPANY_NAME")
     private String companyName;
+    @Column(name="MOBILE_NBR")
     private String mobileNumber;
+    @Column(name="EMAIL_ID")
     private String emailId;
+    @Column(name="GENDER")
     private String gender;
+    @Column(name="NATIONALITY")
     private String nationality;
+    @Column(name="RELIGION")
     private String religion;
+    @Column(name="MARITAL_ST")
     private String maritialStatus;
+    @Column(name="SEXUAL_ORIENT")
     private String sexualOrientation;
+    @Column(name="POLITICAL_ORIENT")
     private String politicalOrientation;
+    @Column(name="COLOR")
     private String color;
+    @Column(name="LANG")
     private String language;
-    private boolean isLgbt;
-    private boolean isVeteran;
-    private boolean isDisable;
+    @Column(name="LGBT")
+    private String isLgbt;
+    @Column(name="VETERAN")
+    private String isVeteran;
+    @Column(name="DISABLED")
+    private String isDisable;
+    @Column(name="SALARY")
     private long salary;
 
     @ManyToOne
@@ -34,7 +50,7 @@ public class LeaderDiversityInfo {
     public LeaderDiversityInfo() {
     }
 
-    public LeaderDiversityInfo(String name, String companyName, String mobileNumber, String emailId, String gender, String nationality, String religion, String maritialStatus, String sexualOrientation, String politicalOrientation, String color, String language, boolean isLgbt, boolean isVeteran, boolean isDisable, long salary) {
+    public LeaderDiversityInfo(String name, String companyName, String mobileNumber, String emailId, String gender, String nationality, String religion, String maritialStatus, String sexualOrientation, String politicalOrientation, String color, String language, String isLgbt, String isVeteran, String isDisable, long salary) {
         this.name = name;
         this.companyName = companyName;
         this.mobileNumber = mobileNumber;
@@ -150,28 +166,28 @@ public class LeaderDiversityInfo {
         this.language = language;
     }
 
-    public boolean isLgbt() {
+    public String isLgbt() {
         return isLgbt;
     }
 
-    public void setLgbt(boolean lgbt) {
-        isLgbt = lgbt;
+    public void setLgbt(String lgbt) {
+        this.isLgbt = lgbt;
     }
 
-    public boolean isVeteran() {
+    public String isVeteran() {
         return isVeteran;
     }
 
-    public void setVeteran(boolean veteran) {
-        isVeteran = veteran;
+    public void setVeteran(String veteran) {
+        this.isVeteran = veteran;
     }
 
-    public boolean isDisable() {
+    public String isDisable() {
         return isDisable;
     }
 
-    public void setDisable(boolean disable) {
-        isDisable = disable;
+    public void setDisable(String disable) {
+        this.isDisable = disable;
     }
 
     public long getSalary() {

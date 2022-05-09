@@ -21,9 +21,9 @@ public class LeaderDiversityInfoDto {
     private String politicalOrientation;
     private String color;
     private String language;
-    private boolean isLgbt;
-    private boolean isVeteran;
-    private boolean isDisable;
+    private String isLgbt;
+    private String isVeteran;
+    private String isDisable;
     private long salary;
 
     private CompanyDiversityInfo companyDiversityInfo;
@@ -31,7 +31,7 @@ public class LeaderDiversityInfoDto {
     public LeaderDiversityInfoDto() {
     }
 
-    public LeaderDiversityInfoDto(String name, String companyName, String mobileNumber, String emailId, String gender, String nationality, String religion, String maritialStatus, String sexualOrientation, String politicalOrientation, String color, String language, boolean isLgbt, boolean isVeteran, boolean isDisable, long salary) {
+    public LeaderDiversityInfoDto(String name, String companyName, String mobileNumber, String emailId, String gender, String nationality, String religion, String maritialStatus, String sexualOrientation, String politicalOrientation, String color, String language, String isLgbt, String isVeteran, String isDisable, long salary) {
         this.name = name;
         this.companyName = companyName;
         this.mobileNumber = mobileNumber;
@@ -147,27 +147,27 @@ public class LeaderDiversityInfoDto {
         this.language = language;
     }
 
-    public boolean isLgbt() {
+    public String isLgbt() {
         return isLgbt;
     }
 
-    public void setLgbt(boolean lgbt) {
+    public void setLgbt(String lgbt) {
         isLgbt = lgbt;
     }
 
-    public boolean isVeteran() {
+    public String isVeteran() {
         return isVeteran;
     }
 
-    public void setVeteran(boolean veteran) {
+    public void setVeteran(String veteran) {
         isVeteran = veteran;
     }
 
-    public boolean isDisable() {
+    public String isDisable() {
         return isDisable;
     }
 
-    public void setDisable(boolean disable) {
+    public void setDisable(String disable) {
         isDisable = disable;
     }
 
