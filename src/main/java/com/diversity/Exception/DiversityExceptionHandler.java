@@ -8,11 +8,9 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 @ControllerAdvice
 public class DiversityExceptionHandler {
 
-    @ExceptionHandler(value = DiversityException.class)
+    @ExceptionHandler(value = RecordNotFoundException.class)
     @ResponseStatus(HttpStatus.NOT_FOUND)
-    public DiversityErrorResponse
-    handleCustomerAlreadyExistsException(
-            DiversityException ex)
+    public DiversityErrorResponse handleRecordNotFoundException(RecordNotFoundException ex)
     {
         return new DiversityErrorResponse(HttpStatus.NOT_FOUND.value(),
                 ex.getMessage());
