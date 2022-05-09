@@ -22,12 +22,6 @@ public class DiversityLeaderService {
         leaderDiversityInfoRepository.save(DtoToEntity.mapLeaderDiversityInfoDtoToEntity(leaderDiversityInfo));
 
     }
-/*    public List<LeaderDiversityInfoDto> getAllLeaders() {
-        List<LeaderDiversityInfo> diversityLeaderInfo = leaderDiversityInfoRepository.findAll();
-        if(diversityLeaderInfo==null)
-            throw new RecordNotFoundException(Constants.MSG_RECORD_NOT_FOUND);
-        return EntityToDto.mapListLeaderDiversityEntityToDto(diversityLeaderInfo);
-    }*/
 
     public LeaderDiversityInfoDto getLeaderByName(String leaderName) {
 

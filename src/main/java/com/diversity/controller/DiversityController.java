@@ -18,27 +18,6 @@ public class DiversityController {
     @Autowired
     private DiversityService service;
 
-    @PostMapping("/employee")
-    public EmployeeDto addEmployee(@RequestBody EmployeeDto employee) {
-
-        return service.addEmployee(employee);
-    }
-
-
-    @GetMapping("/employeeById")
-    public EmployeeDto getEmployeeById(@RequestParam Integer id) {
-        return service.getEmployeeById(id);
-
-    }
-
-/*    @PostMapping("/leader-diversity")
-    public ResponseEntity<String> updateLeaderDiversityInformation(@RequestBody LeaderDiversityInfoDto leaderDiversityInfo) {
-
-        service.updateLeaderDiversityInformation(leaderDiversityInfo);
-        return new ResponseEntity<>(HttpStatus.CREATED);
-
-    }*/
-
     @PostMapping("/company-diversity")
     public ResponseEntity<String> updateCompanyDiversityInformation(@RequestBody CompanyDiversityInfoDto companyDiversityInfoDto) {
 

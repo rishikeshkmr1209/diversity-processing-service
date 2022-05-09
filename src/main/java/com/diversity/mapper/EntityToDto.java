@@ -1,30 +1,17 @@
 package com.diversity.mapper;
 
 import com.diversity.entity.CompanyDiversityInfo;
-import com.diversity.entity.Employee;
 import com.diversity.entity.LeaderDiversityInfo;
 import com.diversity.model.CompanyDiversityInfoDto;
 import com.diversity.model.EmployeeDto;
 import com.diversity.model.LeaderDiversityInfoDto;
 
-import javax.persistence.CascadeType;
-import javax.persistence.OneToMany;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Set;
 
 public class EntityToDto {
 
 
-    public static EmployeeDto convertEntityToDto(Employee employee) {
-        EmployeeDto employeeDto = new EmployeeDto();
-        employeeDto.setId(employee.getId());
-        employeeDto.setName(employee.getName());
-        employeeDto.setSalary(employee.getSalary());
-        employeeDto.setDept(employee.getDept());
-        return employeeDto;
-
-    }
 
     public static List<CompanyDiversityInfoDto> mapListCompanyDiversityEntityToDto(List<CompanyDiversityInfo> companyDiversityInfos) {
         List<CompanyDiversityInfoDto> companyDiversityInfoDtos = new ArrayList<>();
