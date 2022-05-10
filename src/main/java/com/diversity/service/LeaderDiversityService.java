@@ -14,9 +14,9 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 @Service
-public class DiversityLeaderService {
+public class LeaderDiversityService {
 
-    Logger logger = LoggerFactory.getLogger(DiversityLeaderService.class);
+    Logger logger = LoggerFactory.getLogger(LeaderDiversityService.class);
     @Autowired
     private LeaderDiversityInfoRepository leaderDiversityInfoRepository;
 
