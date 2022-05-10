@@ -10,10 +10,7 @@ Gives diversity information
 
 # Database
 
-H2 database has been enabled </br>
-http://localhost:9000/h2
-
-
+Yuga-byte database has been enabled </br>
 
 # See the APIs at:
 
