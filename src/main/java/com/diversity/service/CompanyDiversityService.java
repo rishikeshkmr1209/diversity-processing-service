@@ -1,6 +1,7 @@
 package com.diversity.service;
 
 import com.diversity.entity.CompanyDiversityInfo;
+import com.diversity.entity.Employee;
 import com.diversity.exception.Constants;
 import com.diversity.exception.RecordNotFoundException;
 import com.diversity.mapper.DtoToEntity;
@@ -14,6 +15,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.stream.Collectors;
+import java.util.stream.StreamSupport;
 
 @Service
 public class CompanyDiversityService {
@@ -27,22 +30,24 @@ public class CompanyDiversityService {
     private CompanyDiversityInfoRepository companyDiversityInfoRepository;
 
     public void updateCompanyDiversityInformation(CompanyDiversityInfoDto companyDiversityInfoDto) {
-        if(companyDiversityInfoDto == null)
+        if (companyDiversityInfoDto == null)
             throw new RecordNotFoundException(Constants.MSG_RECORD_NOT_FOUND);
-        CompanyDiversityInfo companyDiversityInfo=DtoToEntity.mapCompanyDiversityInfoDtoToEntity(companyDiversityInfoDto);
-            companyDiversityInfoRepository.save(companyDiversityInfo);
+        CompanyDiversityInfo companyDiversityInfo = DtoToEntity.mapCompanyDiversityInfoDtoToEntity(companyDiversityInfoDto);
+        companyDiversityInfoRepository.save(companyDiversityInfo);
     }
 
     public List<CompanyDiversityInfoDto> getAllCompanies() {
-        List<CompanyDiversityInfo> companyDiversityInfos = companyDiversityInfoRepository.findAll();
-        if(companyDiversityInfos.isEmpty())
-             throw new RecordNotFoundException(Constants.MSG_RECORD_NOT_FOUND);
+
+        var companyDiversityIterable = companyDiversityInfoRepository.findAll();
+        List<CompanyDiversityInfo> companyDiversityInfos = StreamSupport.stream(companyDiversityIterable.spliterator(), false).collect(Collectors.toList());
+        if (companyDiversityInfos.isEmpty())
+            throw new RecordNotFoundException(Constants.MSG_RECORD_NOT_FOUND);
         return EntityToDto.mapListCompanyDiversityEntityToDto(companyDiversityInfos);
     }
 
     public CompanyDiversityInfoDto getCompanyByName(String companyName) {
         CompanyDiversityInfo companyDiversityInfo = companyDiversityInfoRepository.findByCompanyName(companyName);
-        if(companyDiversityInfo == null)
+        if (companyDiversityInfo == null)
             throw new RecordNotFoundException(Constants.MSG_RECORD_NOT_FOUND);
         return EntityToDto.mapCompanyDiversityEntityToDto(companyDiversityInfo);
     }
