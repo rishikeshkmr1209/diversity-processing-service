@@ -1,7 +1,7 @@
 package com.diversity.controller;
 
 import com.diversity.model.CompanyDiversityInfoDto;
-import com.diversity.service.DiversityService;
+import com.diversity.service.CompanyDiversityService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,7 +17,7 @@ public class CompanyDiversityController {
     Logger logger = LoggerFactory.getLogger(CompanyDiversityController.class);
 
     @Autowired
-    private DiversityService service;
+    private CompanyDiversityService service;
 
     @PostMapping("/company-diversity")
     public ResponseEntity<String> updateCompanyDiversityInformation(@RequestBody CompanyDiversityInfoDto companyDiversityInfoDto) {
