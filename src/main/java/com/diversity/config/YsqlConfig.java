@@ -1,8 +1,6 @@
 package com.diversity.config;
 
-import com.diversity.entity.Employee;
 import com.diversity.repo.CompanyDiversityInfoRepository;
-import com.diversity.repo.EmployeeRepository;
 import com.diversity.repo.LeaderDiversityInfoRepository;
 import com.yugabyte.data.jdbc.datasource.YugabyteTransactionManager;
 import com.yugabyte.data.jdbc.repository.config.AbstractYugabyteJdbcConfiguration;
@@ -24,7 +22,7 @@ import javax.sql.DataSource;
 import java.util.Properties;
 
 @Configuration
-@EnableYsqlRepositories(basePackageClasses = {EmployeeRepository.class,CompanyDiversityInfoRepository.class, LeaderDiversityInfoRepository.class})
+@EnableYsqlRepositories(basePackageClasses = {CompanyDiversityInfoRepository.class, LeaderDiversityInfoRepository.class})
 public class YsqlConfig extends AbstractYugabyteJdbcConfiguration {
 
     private static Logger LOGGER = LoggerFactory.getLogger(YsqlConfig.class);

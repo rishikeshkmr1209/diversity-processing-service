@@ -1,7 +1,6 @@
 package com.diversity.service;
 
 import com.diversity.entity.CompanyDiversityInfo;
-import com.diversity.entity.Employee;
 import com.diversity.exception.Constants;
 import com.diversity.exception.RecordNotFoundException;
 import com.diversity.mapper.DtoToEntity;
