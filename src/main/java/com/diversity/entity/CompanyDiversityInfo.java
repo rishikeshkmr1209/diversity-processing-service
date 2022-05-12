@@ -1,29 +1,37 @@
 package com.diversity.entity;
 
 import javax.persistence.*;
-import java.util.List;
 import java.util.Set;
 
 @Entity
 @Table
 public class CompanyDiversityInfo {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String companyName;
+    private String dunsNumber;
+    private String dunsName;
+    private String county;
+    private String phone;
+    private String city;
+    private String state;
+    private String zipCode;
     @OneToMany(cascade = CascadeType.ALL)
     private Set<LeaderDiversityInfo> leaders;
-    private String mobileNumber;
-    private String emailId;
 
     public CompanyDiversityInfo() {
     }
 
-    public CompanyDiversityInfo(String companyName, Set<LeaderDiversityInfo> leaders, String mobileNumber, String emailId) {
-        this.companyName = companyName;
+    public CompanyDiversityInfo(String dunsName, String dunsNumber, String phone, String county, String city, String state, String zipCode, Set<LeaderDiversityInfo> leaders) {
+        this.dunsName = dunsName;
+        this.dunsNumber = dunsNumber;
+        this.phone = phone;
+        this.county = county;
+        this.city = city;
+        this.state = state;
+        this.zipCode = zipCode;
         this.leaders = leaders;
-        this.mobileNumber = mobileNumber;
-        this.emailId = emailId;
     }
 
     public Long getId() {
@@ -34,12 +42,45 @@ public class CompanyDiversityInfo {
         this.id = id;
     }
 
-    public String getCompanyName() {
-        return companyName;
+    public String getDunsNumber() {
+        return dunsNumber;
     }
 
-    public void setCompanyName(String companyName) {
-        this.companyName = companyName;
+    public void setDunsNumber(String dunsNumber) {
+        this.dunsNumber = dunsNumber;
+    }
+
+    public String getDunsName() {
+        return dunsName;
+    }
+
+    public void setDunsName(String dunsName) {
+        this.dunsName = dunsName;
+    }
+
+
+    public String getCounty() {
+        return county;
+    }
+
+    public void setCounty(String county) {
+        this.county = county;
+    }
+
+    public String getState() {
+        return state;
+    }
+
+    public void setState(String state) {
+        this.state = state;
+    }
+
+    public String getZipCode() {
+        return zipCode;
+    }
+
+    public void setZipCode(String zipCode) {
+        this.zipCode = zipCode;
     }
 
     public Set<LeaderDiversityInfo> getLeaders() {
@@ -50,30 +91,35 @@ public class CompanyDiversityInfo {
         this.leaders = leaders;
     }
 
-    public String getMobileNumber() {
-        return mobileNumber;
+    public String getPhone() {
+        return phone;
     }
 
-    public void setMobileNumber(String mobileNumber) {
-        this.mobileNumber = mobileNumber;
+    public void setPhone(String phone) {
+        this.phone = phone;
     }
 
-    public String getEmailId() {
-        return emailId;
+    public String getCity() {
+        return city;
     }
 
-    public void setEmailId(String emailId) {
-        this.emailId = emailId;
+    public void setCity(String city) {
+        this.city = city;
     }
 
     @Override
     public String toString() {
         return "CompanyDiversityInfo{" +
                 "id=" + id +
-                ", companyName='" + companyName + '\'' +
+                ", dunsNumber='" + dunsNumber + '\'' +
+                ", dunsName='" + dunsName + '\'' +
+                ", county='" + county + '\'' +
+                ", phone='" + phone + '\'' +
+                ", city='" + city + '\'' +
+                ", state='" + state + '\'' +
+                ", zipCode='" + zipCode + '\'' +
                 ", leaders=" + leaders +
-                ", mobileNumber='" + mobileNumber + '\'' +
-                ", emailId='" + emailId + '\'' +
                 '}';
     }
+
 }

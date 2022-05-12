@@ -3,7 +3,6 @@ package com.diversity.mapper;
 import com.diversity.entity.CompanyDiversityInfo;
 import com.diversity.entity.LeaderDiversityInfo;
 import com.diversity.model.CompanyDiversityInfoDto;
-import com.diversity.model.EmployeeDto;
 import com.diversity.model.LeaderDiversityInfoDto;
 
 import java.util.ArrayList;
@@ -15,17 +14,17 @@ public class EntityToDto {
         List<CompanyDiversityInfoDto> companyDiversityInfoDtos = new ArrayList<>();
         for (CompanyDiversityInfo companyDiversityInfo : companyDiversityInfos) {
             CompanyDiversityInfoDto companyDiversityInfoDto = new CompanyDiversityInfoDto();
-            if (null != companyDiversityInfo.getCompanyName()) {
-                companyDiversityInfoDto.setCompanyName(companyDiversityInfo.getCompanyName());
+            if (null != companyDiversityInfo.getDunsName()) {
+                companyDiversityInfoDto.setCompanyName(companyDiversityInfo.getDunsName());
             }
-            if (null != companyDiversityInfo.getEmailId()) {
-                companyDiversityInfoDto.setEmailId(companyDiversityInfo.getEmailId());
+            if (null != companyDiversityInfo.getCity()) {
+                companyDiversityInfoDto.setEmailId(companyDiversityInfo.getCity());
             }
             if (null != companyDiversityInfo.getId()) {
                 companyDiversityInfoDto.setId(companyDiversityInfo.getId());
             }
-            if (null != companyDiversityInfo.getMobileNumber()) {
-                companyDiversityInfoDto.setMobileNumber(companyDiversityInfo.getMobileNumber());
+            if (null != companyDiversityInfo.getPhone()) {
+                companyDiversityInfoDto.setMobileNumber(companyDiversityInfo.getPhone());
             }
             if (null != companyDiversityInfo.getLeaders()) {
                 companyDiversityInfoDto.setLeaders(companyDiversityInfo.getLeaders());
@@ -48,20 +47,20 @@ public class EntityToDto {
                 companyDiversityInfoDto.setId(companyDiversityInfo.getId());
             }
 
-            if (null != companyDiversityInfo.getCompanyName()) {
-                companyDiversityInfoDto.setCompanyName(companyDiversityInfo.getCompanyName());
+            if (null != companyDiversityInfo.getDunsName()) {
+                companyDiversityInfoDto.setCompanyName(companyDiversityInfo.getDunsName());
             }
 
             if (null != companyDiversityInfo.getLeaders()) {
                 companyDiversityInfoDto.setLeaders(companyDiversityInfo.getLeaders());
             }
 
-            if (null != companyDiversityInfo.getMobileNumber()) {
-                companyDiversityInfoDto.setMobileNumber(companyDiversityInfo.getMobileNumber());
+            if (null != companyDiversityInfo.getPhone()) {
+                companyDiversityInfoDto.setMobileNumber(companyDiversityInfo.getPhone());
             }
 
-            if (null != companyDiversityInfo.getEmailId()) {
-                companyDiversityInfoDto.setEmailId(companyDiversityInfo.getEmailId());
+            if (null != companyDiversityInfo.getCity()) {
+                companyDiversityInfoDto.setEmailId(companyDiversityInfo.getCity());
             }
         }
         return companyDiversityInfoDto;

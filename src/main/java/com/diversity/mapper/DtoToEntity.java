@@ -28,16 +28,16 @@ public class DtoToEntity {
                 companyDiversityInfo.setId(companyDiversityInfoDto.getId());
             }
             if (null != companyDiversityInfoDto.getCompanyName()) {
-                companyDiversityInfo.setCompanyName(companyDiversityInfoDto.getCompanyName());
+                companyDiversityInfo.setDunsName(companyDiversityInfoDto.getCompanyName());
             }
             if (null != companyDiversityInfoDto.getLeaders()) {
                 companyDiversityInfo.setLeaders(companyDiversityInfoDto.getLeaders());
             }
             if (null != companyDiversityInfoDto.getMobileNumber()) {
-                companyDiversityInfo.setMobileNumber(companyDiversityInfoDto.getMobileNumber());
+                companyDiversityInfo.setPhone(companyDiversityInfoDto.getMobileNumber());
             }
             if (null != companyDiversityInfoDto.getEmailId()) {
-                companyDiversityInfo.setEmailId(companyDiversityInfoDto.getEmailId());
+                companyDiversityInfo.setCity(companyDiversityInfoDto.getEmailId());
             }
         }
 
