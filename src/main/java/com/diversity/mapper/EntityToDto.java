@@ -14,23 +14,34 @@ public class EntityToDto {
         List<CompanyDiversityInfoDto> companyDiversityInfoDtos = new ArrayList<>();
         for (CompanyDiversityInfo companyDiversityInfo : companyDiversityInfos) {
             CompanyDiversityInfoDto companyDiversityInfoDto = new CompanyDiversityInfoDto();
-            if (null != companyDiversityInfo.getDunsName()) {
-                companyDiversityInfoDto.setCompanyName(companyDiversityInfo.getDunsName());
-            }
-            if (null != companyDiversityInfo.getCity()) {
-                companyDiversityInfoDto.setEmailId(companyDiversityInfo.getCity());
-            }
             if (null != companyDiversityInfo.getId()) {
                 companyDiversityInfoDto.setId(companyDiversityInfo.getId());
             }
+            if (null != companyDiversityInfo.getDunsName()) {
+                companyDiversityInfoDto.setDunsName(companyDiversityInfo.getDunsName());
+            }
+            if (null != companyDiversityInfo.getDunsNumber()) {
+                companyDiversityInfoDto.setDunsNumber(companyDiversityInfo.getDunsNumber());
+            }
             if (null != companyDiversityInfo.getPhone()) {
-                companyDiversityInfoDto.setMobileNumber(companyDiversityInfo.getPhone());
+                companyDiversityInfoDto.setPhone(companyDiversityInfo.getPhone());
+            }
+            if (null != companyDiversityInfo.getCity()) {
+                companyDiversityInfoDto.setCity(companyDiversityInfo.getCity());
+            }
+            if (null != companyDiversityInfo.getCounty()) {
+                companyDiversityInfoDto.setCounty(companyDiversityInfo.getCounty());
+            }
+            if (null != companyDiversityInfo.getState()) {
+                companyDiversityInfoDto.setState(companyDiversityInfo.getState());
+            }
+            if (null != companyDiversityInfo.getZipCode()) {
+                companyDiversityInfoDto.setZipCode(companyDiversityInfo.getZipCode());
             }
             if (null != companyDiversityInfo.getLeaders()) {
                 companyDiversityInfoDto.setLeaders(companyDiversityInfo.getLeaders());
             }
-
-
+            
             companyDiversityInfoDtos.add(companyDiversityInfoDto);
 
         }
@@ -48,7 +59,7 @@ public class EntityToDto {
             }
 
             if (null != companyDiversityInfo.getDunsName()) {
-                companyDiversityInfoDto.setCompanyName(companyDiversityInfo.getDunsName());
+                companyDiversityInfoDto.setDunsName(companyDiversityInfo.getDunsName());
             }
 
             if (null != companyDiversityInfo.getLeaders()) {
@@ -56,11 +67,11 @@ public class EntityToDto {
             }
 
             if (null != companyDiversityInfo.getPhone()) {
-                companyDiversityInfoDto.setMobileNumber(companyDiversityInfo.getPhone());
+                companyDiversityInfoDto.setPhone(companyDiversityInfo.getPhone());
             }
 
             if (null != companyDiversityInfo.getCity()) {
-                companyDiversityInfoDto.setEmailId(companyDiversityInfo.getCity());
+                companyDiversityInfoDto.setCounty(companyDiversityInfo.getCity());
             }
         }
         return companyDiversityInfoDto;

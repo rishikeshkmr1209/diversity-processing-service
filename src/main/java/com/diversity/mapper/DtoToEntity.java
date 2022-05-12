@@ -27,18 +27,31 @@ public class DtoToEntity {
             if (null != companyDiversityInfoDto.getId()) {
                 companyDiversityInfo.setId(companyDiversityInfoDto.getId());
             }
-            if (null != companyDiversityInfoDto.getCompanyName()) {
-                companyDiversityInfo.setDunsName(companyDiversityInfoDto.getCompanyName());
+            if (null != companyDiversityInfoDto.getDunsName()) {
+                companyDiversityInfo.setDunsName(companyDiversityInfoDto.getDunsName());
+            }
+            if (null != companyDiversityInfoDto.getDunsNumber()) {
+                companyDiversityInfoDto.setDunsNumber(companyDiversityInfoDto.getDunsNumber());
+            }
+            if (null != companyDiversityInfoDto.getPhone()) {
+                companyDiversityInfo.setPhone(companyDiversityInfoDto.getPhone());
+            }
+            if (null != companyDiversityInfoDto.getCounty()) {
+                companyDiversityInfo.setCity(companyDiversityInfoDto.getCounty());
+            }
+            if (null != companyDiversityInfoDto.getCity()) {
+                companyDiversityInfo.setCity(companyDiversityInfoDto.getCity());
+            }
+            if (null != companyDiversityInfoDto.getState()) {
+                companyDiversityInfo.setState(companyDiversityInfoDto.getState());
+            }
+            if (null != companyDiversityInfoDto.getZipCode()) {
+                companyDiversityInfo.setZipCode(companyDiversityInfoDto.getZipCode());
             }
             if (null != companyDiversityInfoDto.getLeaders()) {
                 companyDiversityInfo.setLeaders(companyDiversityInfoDto.getLeaders());
             }
-            if (null != companyDiversityInfoDto.getMobileNumber()) {
-                companyDiversityInfo.setPhone(companyDiversityInfoDto.getMobileNumber());
-            }
-            if (null != companyDiversityInfoDto.getEmailId()) {
-                companyDiversityInfo.setCity(companyDiversityInfoDto.getEmailId());
-            }
+
         }
 
         return companyDiversityInfo;
