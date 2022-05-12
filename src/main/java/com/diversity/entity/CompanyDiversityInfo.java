@@ -9,7 +9,7 @@ public class CompanyDiversityInfo {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Long company_id;
     private String dunsNumber;
     private String dunsName;
     private String county;
@@ -34,12 +34,12 @@ public class CompanyDiversityInfo {
         this.leaders = leaders;
     }
 
-    public Long getId() {
-        return id;
+    public Long getCompany_id() {
+        return company_id;
     }
 
-    public void setId(Long id) {
-        this.id = id;
+    public void setCompany_id(Long company_id) {
+        this.company_id = company_id;
     }
 
     public String getDunsNumber() {
@@ -110,7 +110,7 @@ public class CompanyDiversityInfo {
     @Override
     public String toString() {
         return "CompanyDiversityInfo{" +
-                "id=" + id +
+                "id=" + company_id +
                 ", dunsNumber='" + dunsNumber + '\'' +
                 ", dunsName='" + dunsName + '\'' +
                 ", county='" + county + '\'' +

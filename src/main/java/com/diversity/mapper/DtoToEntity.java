@@ -13,9 +13,13 @@ public class DtoToEntity {
     public static LeaderDiversityInfo mapLeaderDiversityInfoDtoToEntity(LeaderDiversityInfoDto leaderDiversityInfoDto) {
         LeaderDiversityInfo leaderDiversityInfo = new LeaderDiversityInfo();
         leaderDiversityInfo.setName(leaderDiversityInfoDto.getName());
-        leaderDiversityInfo.setCompanyName(leaderDiversityInfoDto.getCompanyName());
-        leaderDiversityInfo.setEmailId(leaderDiversityInfoDto.getEmailId());
-        leaderDiversityInfo.setMobileNumber(leaderDiversityInfoDto.getMobileNumber());
+        leaderDiversityInfo.setEthnicity(leaderDiversityInfoDto.getEthnicity());
+        leaderDiversityInfo.setDisable(leaderDiversityInfoDto.isDisable());
+        leaderDiversityInfo.setLgbt(leaderDiversityInfoDto.isLgbt());
+        leaderDiversityInfo.setVeteran(leaderDiversityInfoDto.isVeteran());
+        leaderDiversityInfo.setGender(leaderDiversityInfoDto.getGender());
+        leaderDiversityInfo.setSharePercentage(leaderDiversityInfoDto.getSharePercentage());
+
         return leaderDiversityInfo;
     }
 
@@ -25,7 +29,7 @@ public class DtoToEntity {
 
         if (null != companyDiversityInfoDto) {
             if (null != companyDiversityInfoDto.getId()) {
-                companyDiversityInfo.setId(companyDiversityInfoDto.getId());
+                companyDiversityInfo.setCompany_id(companyDiversityInfoDto.getId());
             }
             if (null != companyDiversityInfoDto.getDunsName()) {
                 companyDiversityInfo.setDunsName(companyDiversityInfoDto.getDunsName());

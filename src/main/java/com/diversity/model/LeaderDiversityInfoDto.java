@@ -2,53 +2,68 @@ package com.diversity.model;
 
 import com.diversity.entity.CompanyDiversityInfo;
 
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
-
 public class LeaderDiversityInfoDto {
 
     private Integer id;
     private String name;
-    private String companyName;
-    private String mobileNumber;
-    private String emailId;
     private String gender;
-    private String nationality;
-    private String religion;
+    private String ethnicity;
+    private String isLgbt;
+    private String isVeteran;
+    private String isDisable;
+    private long sharePercentage;
+
+/*    private String companyName;
+    private String mobileNumber;
+    private String emailId;*/
+/*    private String religion;
     private String maritialStatus;
     private String sexualOrientation;
     private String politicalOrientation;
     private String color;
-    private String language;
-    private String isLgbt;
-    private String isVeteran;
-    private String isDisable;
-    private long salary;
+    private String language;*/
+   // private long salary;
 
     private CompanyDiversityInfo companyDiversityInfo;
 
     public LeaderDiversityInfoDto() {
     }
 
+    public LeaderDiversityInfoDto(Integer id, String name, String gender, String ethnicity, String isLgbt, String isVeteran, String isDisable, long sharePercentage, CompanyDiversityInfo companyDiversityInfo) {
+        this.id = id;
+        this.name = name;
+        this.gender = gender;
+        this.ethnicity = ethnicity;
+        this.isLgbt = isLgbt;
+        this.isVeteran = isVeteran;
+        this.isDisable = isDisable;
+        this.sharePercentage = sharePercentage;
+        this.companyDiversityInfo = companyDiversityInfo;
+    }
+
+/*
     public LeaderDiversityInfoDto(String name, String companyName, String mobileNumber, String emailId, String gender, String nationality, String religion, String maritialStatus, String sexualOrientation, String politicalOrientation, String color, String language, String isLgbt, String isVeteran, String isDisable, long salary) {
         this.name = name;
         this.companyName = companyName;
         this.mobileNumber = mobileNumber;
         this.emailId = emailId;
         this.gender = gender;
-        this.nationality = nationality;
-        this.religion = religion;
+        this.ethnicity = nationality;
+
+        this.isLgbt = isLgbt;
+        this.isVeteran = isVeteran;
+        this.isDisable = isDisable;
+*/
+/*        this.religion = religion;
         this.maritialStatus = maritialStatus;
         this.sexualOrientation = sexualOrientation;
         this.politicalOrientation = politicalOrientation;
         this.color = color;
-        this.language = language;
-        this.isLgbt = isLgbt;
-        this.isVeteran = isVeteran;
-        this.isDisable = isDisable;
-        this.salary = salary;
+        this.language = language;*//*
+
+       // this.salary = salary;
     }
+*/
 
     public String getName() {
         return name;
@@ -58,7 +73,55 @@ public class LeaderDiversityInfoDto {
         this.name = name;
     }
 
-    public String getCompanyName() {
+    public String getGender() {
+        return gender;
+    }
+
+    public void setGender(String gender) {
+        this.gender = gender;
+    }
+
+    public String getEthnicity() {
+        return ethnicity;
+    }
+
+    public void setEthnicity(String ethnicity) {
+        this.ethnicity = ethnicity;
+    }
+
+    public String isLgbt() {
+        return isLgbt;
+    }
+
+    public void setLgbt(String lgbt) {
+        isLgbt = lgbt;
+    }
+
+    public String isVeteran() {
+        return isVeteran;
+    }
+
+    public void setVeteran(String veteran) {
+        isVeteran = veteran;
+    }
+
+    public String isDisable() {
+        return isDisable;
+    }
+
+    public void setDisable(String disable) {
+        isDisable = disable;
+    }
+
+    public long getSharePercentage() {
+        return sharePercentage;
+    }
+
+    public void setSharePercentage(long sharePercentage) {
+        this.sharePercentage = sharePercentage;
+    }
+
+    /*public String getCompanyName() {
         return companyName;
     }
 
@@ -80,23 +143,6 @@ public class LeaderDiversityInfoDto {
 
     public void setEmailId(String emailId) {
         this.emailId = emailId;
-    }
-
-
-    public String getGender() {
-        return gender;
-    }
-
-    public void setGender(String gender) {
-        this.gender = gender;
-    }
-
-    public String getNationality() {
-        return nationality;
-    }
-
-    public void setNationality(String nationality) {
-        this.nationality = nationality;
     }
 
     public String getReligion() {
@@ -146,60 +192,32 @@ public class LeaderDiversityInfoDto {
     public void setLanguage(String language) {
         this.language = language;
     }
+*/
 
-    public String isLgbt() {
-        return isLgbt;
-    }
 
-    public void setLgbt(String lgbt) {
-        isLgbt = lgbt;
-    }
-
-    public String isVeteran() {
-        return isVeteran;
-    }
-
-    public void setVeteran(String veteran) {
-        isVeteran = veteran;
-    }
-
-    public String isDisable() {
-        return isDisable;
-    }
-
-    public void setDisable(String disable) {
-        isDisable = disable;
-    }
-
-    public long getSalary() {
+/*    public long getSalary() {
         return salary;
     }
 
     public void setSalary(long salary) {
         this.salary = salary;
-    }
+    }*/
 
     @Override
     public String toString() {
-        return "LeaderDiversityInfo{" +
+        return "LeaderDiversityInfoDto{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
-                ", companyName='" + companyName + '\'' +
-                ", mobileNumber='" + mobileNumber + '\'' +
-                ", emailId='" + emailId + '\'' +
                 ", gender='" + gender + '\'' +
-                ", nationality='" + nationality + '\'' +
-                ", religion='" + religion + '\'' +
-                ", maritialStatus='" + maritialStatus + '\'' +
-                ", sexualOrientation='" + sexualOrientation + '\'' +
-                ", politicalOrientation='" + politicalOrientation + '\'' +
-                ", color='" + color + '\'' +
-                ", language='" + language + '\'' +
-                ", isLgbt=" + isLgbt +
-                ", isVeteran=" + isVeteran +
-                ", isDisable=" + isDisable +
-                ", salary=" + salary +
+                ", ethnicity='" + ethnicity + '\'' +
+                ", isLgbt='" + isLgbt + '\'' +
+                ", isVeteran='" + isVeteran + '\'' +
+                ", isDisable='" + isDisable + '\'' +
+                ", sharePercentage=" + sharePercentage +
+                ", companyDiversityInfo=" + companyDiversityInfo +
                 '}';
     }
+
+
 
 }

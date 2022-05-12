@@ -14,8 +14,8 @@ public class EntityToDto {
         List<CompanyDiversityInfoDto> companyDiversityInfoDtos = new ArrayList<>();
         for (CompanyDiversityInfo companyDiversityInfo : companyDiversityInfos) {
             CompanyDiversityInfoDto companyDiversityInfoDto = new CompanyDiversityInfoDto();
-            if (null != companyDiversityInfo.getId()) {
-                companyDiversityInfoDto.setId(companyDiversityInfo.getId());
+            if (null != companyDiversityInfo.getCompany_id()) {
+                companyDiversityInfoDto.setId(companyDiversityInfo.getCompany_id());
             }
             if (null != companyDiversityInfo.getDunsName()) {
                 companyDiversityInfoDto.setDunsName(companyDiversityInfo.getDunsName());
@@ -41,7 +41,7 @@ public class EntityToDto {
             if (null != companyDiversityInfo.getLeaders()) {
                 companyDiversityInfoDto.setLeaders(companyDiversityInfo.getLeaders());
             }
-            
+
             companyDiversityInfoDtos.add(companyDiversityInfoDto);
 
         }
@@ -54,8 +54,8 @@ public class EntityToDto {
         CompanyDiversityInfoDto companyDiversityInfoDto = new CompanyDiversityInfoDto();
         if (null != companyDiversityInfo) {
 
-            if (null != companyDiversityInfo.getId()) {
-                companyDiversityInfoDto.setId(companyDiversityInfo.getId());
+            if (null != companyDiversityInfo.getCompany_id()) {
+                companyDiversityInfoDto.setId(companyDiversityInfo.getCompany_id());
             }
 
             if (null != companyDiversityInfo.getDunsName()) {
@@ -86,7 +86,7 @@ public class EntityToDto {
                 leaderDto.setName(diversityLeaderInfo.getName());
             }
 
-            if (null != diversityLeaderInfo.getCompanyName()) {
+           /* if (null != diversityLeaderInfo.getCompanyName()) {
                 leaderDto.setCompanyName(diversityLeaderInfo.getCompanyName());
             }
 
@@ -97,12 +97,12 @@ public class EntityToDto {
             if (null != diversityLeaderInfo.getEmailId()) {
                 leaderDto.setEmailId(diversityLeaderInfo.getEmailId());
             }
-
+*/
             if (null != diversityLeaderInfo.getGender()) {
                 leaderDto.setGender(diversityLeaderInfo.getGender());
             }
 
-            if (null != diversityLeaderInfo.getColor()) {
+ /*           if (null != diversityLeaderInfo.getColor()) {
                 leaderDto.setColor(diversityLeaderInfo.getColor());
             }
 
@@ -127,9 +127,9 @@ public class EntityToDto {
             if (null != diversityLeaderInfo.getReligion()) {
                 leaderDto.setReligion(diversityLeaderInfo.getReligion());
             }
-
-            if (null != diversityLeaderInfo.getNationality()) {
-                leaderDto.setNationality(diversityLeaderInfo.getNationality());
+*/
+            if (null != diversityLeaderInfo.getEthnicity()) {
+                leaderDto.setEthnicity(diversityLeaderInfo.getEthnicity());
             }
 
             leaderDto.setDisable(diversityLeaderInfo.isDisable());
@@ -150,8 +150,19 @@ public class EntityToDto {
             if (null != diversityLeaderInfo.getName()) {
                 leaderDiversityInfoDto.setName(diversityLeaderInfo.getName());
             }
+            if (null != diversityLeaderInfo.getGender()) {
+                leaderDiversityInfoDto.setGender(diversityLeaderInfo.getGender());
+            }
+            if (null != diversityLeaderInfo.getEthnicity()) {
+                leaderDiversityInfoDto.setEthnicity(diversityLeaderInfo.getEthnicity());
+            }
 
-            if (null != diversityLeaderInfo.getCompanyName()) {
+            leaderDiversityInfoDto.setDisable(diversityLeaderInfo.isDisable());
+            leaderDiversityInfoDto.setLgbt(diversityLeaderInfo.isLgbt());
+            leaderDiversityInfoDto.setVeteran(diversityLeaderInfo.isVeteran());
+            leaderDiversityInfoDto.setSharePercentage(diversityLeaderInfo.getSharePercentage());
+
+          /*  if (null != diversityLeaderInfo.getCompanyName()) {
                 leaderDiversityInfoDto.setCompanyName(diversityLeaderInfo.getCompanyName());
             }
 
@@ -161,10 +172,6 @@ public class EntityToDto {
 
             if (null != diversityLeaderInfo.getEmailId()) {
                 leaderDiversityInfoDto.setEmailId(diversityLeaderInfo.getEmailId());
-            }
-
-            if (null != diversityLeaderInfo.getGender()) {
-                leaderDiversityInfoDto.setGender(diversityLeaderInfo.getGender());
             }
 
             if (null != diversityLeaderInfo.getColor()) {
@@ -192,14 +199,7 @@ public class EntityToDto {
             if (null != diversityLeaderInfo.getReligion()) {
                 leaderDiversityInfoDto.setReligion(diversityLeaderInfo.getReligion());
             }
-
-            if (null != diversityLeaderInfo.getNationality()) {
-                leaderDiversityInfoDto.setNationality(diversityLeaderInfo.getNationality());
-            }
-
-            leaderDiversityInfoDto.setDisable(diversityLeaderInfo.isDisable());
-            leaderDiversityInfoDto.setLgbt(diversityLeaderInfo.isLgbt());
-            leaderDiversityInfoDto.setVeteran(diversityLeaderInfo.isVeteran());
+*/
 
         }
         return leaderDiversityInfoDto;
