@@ -24,12 +24,12 @@ public class LeaderDiversityInfoDto {
     private String language;*/
    // private long salary;
 
-    private CompanyDiversityInfo companyDiversityInfo;
+//    private CompanyDiversityInfo companyDiversityInfo;
 
     public LeaderDiversityInfoDto() {
     }
 
-    public LeaderDiversityInfoDto(Integer id, String name, String gender, String ethnicity, String isLgbt, String isVeteran, String isDisable, long sharePercentage, CompanyDiversityInfo companyDiversityInfo) {
+    public LeaderDiversityInfoDto(Integer id, String name, String gender, String ethnicity, String isLgbt, String isVeteran, String isDisable, long sharePercentage) {
         this.id = id;
         this.name = name;
         this.gender = gender;
@@ -38,7 +38,7 @@ public class LeaderDiversityInfoDto {
         this.isVeteran = isVeteran;
         this.isDisable = isDisable;
         this.sharePercentage = sharePercentage;
-        this.companyDiversityInfo = companyDiversityInfo;
+      //  this.companyDiversityInfo = companyDiversityInfo;
     }
 
 /*
@@ -214,7 +214,6 @@ public class LeaderDiversityInfoDto {
                 ", isVeteran='" + isVeteran + '\'' +
                 ", isDisable='" + isDisable + '\'' +
                 ", sharePercentage=" + sharePercentage +
-                ", companyDiversityInfo=" + companyDiversityInfo +
                 '}';
     }
 
