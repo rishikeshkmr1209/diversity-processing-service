@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
+@CrossOrigin(origins = "*", allowedHeaders = "*")
 public class CompanyDiversityController {
 
     Logger logger = LoggerFactory.getLogger(CompanyDiversityController.class);
