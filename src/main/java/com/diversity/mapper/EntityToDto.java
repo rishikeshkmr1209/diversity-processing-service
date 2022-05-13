@@ -57,6 +57,9 @@ public class EntityToDto {
             if (null != companyDiversityInfo.getId()) {
                 companyDiversityInfoDto.setId(companyDiversityInfo.getId());
             }
+            if (null != companyDiversityInfo.getDunsNumber()) {
+                companyDiversityInfoDto.setDunsNumber(companyDiversityInfo.getDunsNumber());
+            }
 
             if (null != companyDiversityInfo.getDunsName()) {
                 companyDiversityInfoDto.setDunsName(companyDiversityInfo.getDunsName());
@@ -71,7 +74,13 @@ public class EntityToDto {
             }
 
             if (null != companyDiversityInfo.getCity()) {
-                companyDiversityInfoDto.setCounty(companyDiversityInfo.getCity());
+                companyDiversityInfoDto.setCity(companyDiversityInfo.getCity());
+            }
+            if (null != companyDiversityInfo.getCounty()) {
+                companyDiversityInfoDto.setCounty(companyDiversityInfo.getCounty());
+            }
+            if (null != companyDiversityInfo.getZipCode()) {
+                companyDiversityInfoDto.setZipCode(companyDiversityInfo.getZipCode());
             }
         }
         return companyDiversityInfoDto;
@@ -96,6 +105,7 @@ public class EntityToDto {
             leaderDto.setIsDisable(diversityLeaderInfo.getIsDisable());
             leaderDto.setIsLgbt(diversityLeaderInfo.getIsLgbt());
             leaderDto.setIsVeteran(diversityLeaderInfo.getIsVeteran());
+            leaderDto.setSharePercentage(diversityLeaderInfo.getSharePercentage());
 
             diversityLeadersDtos.add(leaderDto);
 
