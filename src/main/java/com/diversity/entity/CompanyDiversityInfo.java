@@ -9,7 +9,7 @@ public class CompanyDiversityInfo {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long company_id;
+    private Long id;
     private String dunsNumber;
     private String dunsName;
     private String county;
@@ -17,7 +17,7 @@ public class CompanyDiversityInfo {
     private String city;
     private String state;
     private String zipCode;
-    @OneToMany(cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "company",cascade = CascadeType.ALL,orphanRemoval = true)
     private Set<LeaderDiversityInfo> leaders;
 
     public CompanyDiversityInfo() {
@@ -34,12 +34,12 @@ public class CompanyDiversityInfo {
         this.leaders = leaders;
     }
 
-    public Long getCompany_id() {
-        return company_id;
+    public Long getId() {
+        return id;
     }
 
-    public void setCompany_id(Long company_id) {
-        this.company_id = company_id;
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public String getDunsNumber() {
@@ -58,13 +58,28 @@ public class CompanyDiversityInfo {
         this.dunsName = dunsName;
     }
 
-
     public String getCounty() {
         return county;
     }
 
     public void setCounty(String county) {
         this.county = county;
+    }
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
+
+    public String getCity() {
+        return city;
+    }
+
+    public void setCity(String city) {
+        this.city = city;
     }
 
     public String getState() {
@@ -91,26 +106,10 @@ public class CompanyDiversityInfo {
         this.leaders = leaders;
     }
 
-    public String getPhone() {
-        return phone;
-    }
-
-    public void setPhone(String phone) {
-        this.phone = phone;
-    }
-
-    public String getCity() {
-        return city;
-    }
-
-    public void setCity(String city) {
-        this.city = city;
-    }
-
     @Override
     public String toString() {
         return "CompanyDiversityInfo{" +
-                "id=" + company_id +
+                "id=" + id +
                 ", dunsNumber='" + dunsNumber + '\'' +
                 ", dunsName='" + dunsName + '\'' +
                 ", county='" + county + '\'' +
@@ -121,5 +120,4 @@ public class CompanyDiversityInfo {
                 ", leaders=" + leaders +
                 '}';
     }
-
 }

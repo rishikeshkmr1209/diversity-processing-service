@@ -8,5 +8,5 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface CompanyDiversityInfoRepository extends JpaRepository<CompanyDiversityInfo, Integer> {
 
-    CompanyDiversityInfo findByCompanyName(String companyName);
+    CompanyDiversityInfo findByDunsName(String dunsName);
 }

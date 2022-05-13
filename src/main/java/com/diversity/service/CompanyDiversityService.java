@@ -41,7 +41,7 @@ public class CompanyDiversityService {
     }
 
     public CompanyDiversityInfoDto getCompanyByName(String companyName) {
-        CompanyDiversityInfo companyDiversityInfo = companyDiversityInfoRepository.findByCompanyName(companyName);
+        CompanyDiversityInfo companyDiversityInfo = companyDiversityInfoRepository.findByDunsName(companyName);
         if(companyDiversityInfo == null)
             throw new RecordNotFoundException(Constants.MSG_RECORD_NOT_FOUND);
         return EntityToDto.mapCompanyDiversityEntityToDto(companyDiversityInfo);

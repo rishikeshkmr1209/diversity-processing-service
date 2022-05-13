@@ -1,0 +1,30 @@
+{
+  "city": "Hyderabad",
+  "county": "India",
+  "dunsName": "199",
+  "dunsNumber": "Tech Mahindra",
+  "id": 0,
+  "leaders": [
+    {
+      "isDisable": "No",
+      "ethnicity": "Asian",
+      "gender": "Male",
+      "isLgbt": "No",
+      "name": "Sumit",
+      "sharePercentage": 65,
+      "isVeteran": "No"
+    },
+{
+      "isDisable": "No",
+      "ethnicity": "Asian",
+      "gender": "Male",
+      "isLgbt": "No",
+      "name": "Visakh",
+      "sharePercentage": 21,
+      "isVeteran": "No"
+    }
+  ],
+  "phone": "8766098",
+  "state": "Telangana",
+  "zipCode": "500034"
+}

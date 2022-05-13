@@ -7,6 +7,9 @@ import com.diversity.model.LeaderDiversityInfoDto;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.util.List;
+import java.util.Set;
+
 public class DtoToEntity {
 
     Logger logger = LoggerFactory.getLogger(DtoToEntity.class);
@@ -14,9 +17,9 @@ public class DtoToEntity {
         LeaderDiversityInfo leaderDiversityInfo = new LeaderDiversityInfo();
         leaderDiversityInfo.setName(leaderDiversityInfoDto.getName());
         leaderDiversityInfo.setEthnicity(leaderDiversityInfoDto.getEthnicity());
-        leaderDiversityInfo.setDisable(leaderDiversityInfoDto.isDisable());
-        leaderDiversityInfo.setLgbt(leaderDiversityInfoDto.isLgbt());
-        leaderDiversityInfo.setVeteran(leaderDiversityInfoDto.isVeteran());
+        leaderDiversityInfo.setIsDisable(leaderDiversityInfoDto.isDisable());
+        leaderDiversityInfo.setIsLgbt(leaderDiversityInfoDto.isLgbt());
+        leaderDiversityInfo.setIsVeteran(leaderDiversityInfoDto.isVeteran());
         leaderDiversityInfo.setGender(leaderDiversityInfoDto.getGender());
         leaderDiversityInfo.setSharePercentage(leaderDiversityInfoDto.getSharePercentage());
 
@@ -29,19 +32,19 @@ public class DtoToEntity {
 
         if (null != companyDiversityInfoDto) {
             if (null != companyDiversityInfoDto.getId()) {
-                companyDiversityInfo.setCompany_id(companyDiversityInfoDto.getId());
+                companyDiversityInfo.setId(companyDiversityInfoDto.getId());
             }
             if (null != companyDiversityInfoDto.getDunsName()) {
                 companyDiversityInfo.setDunsName(companyDiversityInfoDto.getDunsName());
             }
             if (null != companyDiversityInfoDto.getDunsNumber()) {
-                companyDiversityInfoDto.setDunsNumber(companyDiversityInfoDto.getDunsNumber());
+                companyDiversityInfo.setDunsNumber(companyDiversityInfoDto.getDunsNumber());
             }
             if (null != companyDiversityInfoDto.getPhone()) {
                 companyDiversityInfo.setPhone(companyDiversityInfoDto.getPhone());
             }
             if (null != companyDiversityInfoDto.getCounty()) {
-                companyDiversityInfo.setCity(companyDiversityInfoDto.getCounty());
+                companyDiversityInfo.setCounty(companyDiversityInfoDto.getCounty());
             }
             if (null != companyDiversityInfoDto.getCity()) {
                 companyDiversityInfo.setCity(companyDiversityInfoDto.getCity());
@@ -54,6 +57,12 @@ public class DtoToEntity {
             }
             if (null != companyDiversityInfoDto.getLeaders()) {
                 companyDiversityInfo.setLeaders(companyDiversityInfoDto.getLeaders());
+                Set<LeaderDiversityInfo> leaders= companyDiversityInfo.getLeaders();
+                for (LeaderDiversityInfo leader:leaders){
+                    leader.setCompany(companyDiversityInfo);
+
+                }
+
             }
 
         }
