@@ -17,9 +17,9 @@ public class DtoToEntity {
         LeaderDiversityInfo leaderDiversityInfo = new LeaderDiversityInfo();
         leaderDiversityInfo.setName(leaderDiversityInfoDto.getName());
         leaderDiversityInfo.setEthnicity(leaderDiversityInfoDto.getEthnicity());
-        leaderDiversityInfo.setIsDisable(leaderDiversityInfoDto.isDisable());
-        leaderDiversityInfo.setIsLgbt(leaderDiversityInfoDto.isLgbt());
-        leaderDiversityInfo.setIsVeteran(leaderDiversityInfoDto.isVeteran());
+        leaderDiversityInfo.setIsDisable(leaderDiversityInfoDto.getIsDisable());
+        leaderDiversityInfo.setIsLgbt(leaderDiversityInfoDto.getIsLgbt());
+        leaderDiversityInfo.setIsVeteran(leaderDiversityInfoDto.getIsVeteran());
         leaderDiversityInfo.setGender(leaderDiversityInfoDto.getGender());
         leaderDiversityInfo.setSharePercentage(leaderDiversityInfoDto.getSharePercentage());
 
@@ -57,11 +57,13 @@ public class DtoToEntity {
             }
             if (null != companyDiversityInfoDto.getLeaders()) {
                 companyDiversityInfo.setLeaders(companyDiversityInfoDto.getLeaders());
-                Set<LeaderDiversityInfo> leaders= companyDiversityInfo.getLeaders();
+
+
+               /* Set<LeaderDiversityInfo> leaders= companyDiversityInfo.getLeaders();
                 for (LeaderDiversityInfo leader:leaders){
                     leader.setCompany(companyDiversityInfo);
 
-                }
+                }*/
 
             }
 

@@ -1,5 +1,7 @@
 package com.diversity.entity;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+
 import javax.persistence.*;
 import java.util.Set;
 
@@ -17,7 +19,8 @@ public class CompanyDiversityInfo {
     private String city;
     private String state;
     private String zipCode;
-    @OneToMany(mappedBy = "company",cascade = CascadeType.ALL,orphanRemoval = true)
+    @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
+    @JoinColumn(name = "company_id")
     private Set<LeaderDiversityInfo> leaders;
 
     public CompanyDiversityInfo() {

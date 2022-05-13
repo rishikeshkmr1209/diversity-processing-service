@@ -29,9 +29,9 @@ public class CompanyDiversityService {
     private CompanyDiversityInfoRepository companyDiversityInfoRepository;
 
     public void updateCompanyDiversityInformation(CompanyDiversityInfoDto companyDiversityInfoDto) {
-        if (companyDiversityInfoDto == null)
-            throw new RecordNotFoundException(Constants.MSG_RECORD_NOT_FOUND);
+
         CompanyDiversityInfo companyDiversityInfo = DtoToEntity.mapCompanyDiversityInfoDtoToEntity(companyDiversityInfoDto);
+
         companyDiversityInfoRepository.save(companyDiversityInfo);
     }
 
@@ -44,8 +44,8 @@ public class CompanyDiversityService {
         return EntityToDto.mapListCompanyDiversityEntityToDto(companyDiversityInfos);
     }
 
-    public CompanyDiversityInfoDto getCompanyByName(String companyName) {
-        CompanyDiversityInfo companyDiversityInfo = companyDiversityInfoRepository.findByDunsName(companyName);
+    public CompanyDiversityInfoDto getCompanyByName(String dunsName) {
+        CompanyDiversityInfo companyDiversityInfo = companyDiversityInfoRepository.findByDunsName(dunsName);
         if(companyDiversityInfo == null)
             throw new RecordNotFoundException(Constants.MSG_RECORD_NOT_FOUND);
         return EntityToDto.mapCompanyDiversityEntityToDto(companyDiversityInfo);

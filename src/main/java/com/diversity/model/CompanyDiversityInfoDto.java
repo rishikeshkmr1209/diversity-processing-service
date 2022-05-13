@@ -2,7 +2,9 @@ package com.diversity.model;
 
 
 import com.diversity.entity.LeaderDiversityInfo;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
+import java.util.Objects;
 import java.util.Set;
 
 public class CompanyDiversityInfoDto
@@ -103,6 +105,8 @@ public class CompanyDiversityInfoDto
     public void setZipCode(String zipCode) {
         this.zipCode = zipCode;
     }
+
+
 
     @Override
     public String toString() {

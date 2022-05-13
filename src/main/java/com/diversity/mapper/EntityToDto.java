@@ -93,9 +93,9 @@ public class EntityToDto {
                 leaderDto.setEthnicity(diversityLeaderInfo.getEthnicity());
             }
 
-            leaderDto.setDisable(diversityLeaderInfo.getIsDisable());
-            leaderDto.setLgbt(diversityLeaderInfo.getIsLgbt());
-            leaderDto.setVeteran(diversityLeaderInfo.getIsVeteran());
+            leaderDto.setIsDisable(diversityLeaderInfo.getIsDisable());
+            leaderDto.setIsLgbt(diversityLeaderInfo.getIsLgbt());
+            leaderDto.setIsVeteran(diversityLeaderInfo.getIsVeteran());
 
             diversityLeadersDtos.add(leaderDto);
 
@@ -118,9 +118,9 @@ public class EntityToDto {
                 leaderDiversityInfoDto.setEthnicity(diversityLeaderInfo.getEthnicity());
             }
 
-            leaderDiversityInfoDto.setDisable(diversityLeaderInfo.getIsDisable());
-            leaderDiversityInfoDto.setLgbt(diversityLeaderInfo.getIsLgbt());
-            leaderDiversityInfoDto.setVeteran(diversityLeaderInfo.getIsVeteran());
+            leaderDiversityInfoDto.setIsDisable(diversityLeaderInfo.getIsDisable());
+            leaderDiversityInfoDto.setIsLgbt(diversityLeaderInfo.getIsLgbt());
+            leaderDiversityInfoDto.setIsVeteran(diversityLeaderInfo.getIsVeteran());
             leaderDiversityInfoDto.setSharePercentage(diversityLeaderInfo.getSharePercentage());
 
         }
