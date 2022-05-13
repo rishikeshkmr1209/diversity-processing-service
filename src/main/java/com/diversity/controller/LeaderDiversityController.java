@@ -41,4 +41,11 @@ public class LeaderDiversityController {
         return new ResponseEntity<>(diversityLeaders, HttpStatus.OK);
     }
 
+    @GetMapping("/leaders-details/{companyId}")
+    public ResponseEntity<List<LeaderDiversityInfoDto>> getAllDiversityLeadersUsingCompanyId(@PathVariable String companyId)
+    {
+        List<LeaderDiversityInfoDto> diversityLeaders = leaderService.getAllDiversityLeadersUsingCompanyId(companyId);
+        return new ResponseEntity<>(diversityLeaders, HttpStatus.OK);
+    }
+
 }
