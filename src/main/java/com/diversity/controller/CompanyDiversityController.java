@@ -1,6 +1,7 @@
 package com.diversity.controller;
 
 import com.diversity.model.CompanyDiversityInfoDto;
+import com.diversity.model.CompanyDiversityResponse;
 import com.diversity.service.CompanyDiversityService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -35,13 +36,12 @@ public class CompanyDiversityController {
 
     }
 
-    @GetMapping("/companies/{companyName}")
-    public ResponseEntity<CompanyDiversityInfoDto> getCompanyByName(@PathVariable String companyName) {
-        CompanyDiversityInfoDto companyDiversityInfoDto = service.getCompanyByName(companyName);
-        return new ResponseEntity<>(companyDiversityInfoDto, HttpStatus.OK);
+    @GetMapping("/companies/{dunsName}")
+    public ResponseEntity<CompanyDiversityResponse> getCompanyByDunsName(@PathVariable String dunsName) {
+        CompanyDiversityResponse companyDiversityResponse = service.getCompanyByDunsName(dunsName);
+        return new ResponseEntity<>(companyDiversityResponse, HttpStatus.OK);
 
     }
-
 
 
 }
