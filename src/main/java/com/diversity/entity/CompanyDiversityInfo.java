@@ -19,6 +19,8 @@ public class CompanyDiversityInfo {
     private String city;
     private String state;
     private String zipCode;
+
+    private String streetAddress;
     @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
     @JoinColumn(name = "company_id")
     private Set<LeaderDiversityInfo> leaders;
@@ -26,14 +28,15 @@ public class CompanyDiversityInfo {
     public CompanyDiversityInfo() {
     }
 
-    public CompanyDiversityInfo(String dunsName, String dunsNumber, String phone, String county, String city, String state, String zipCode, Set<LeaderDiversityInfo> leaders) {
-        this.dunsName = dunsName;
+    public CompanyDiversityInfo(String dunsNumber, String dunsName, String county, String phone, String city, String state, String zipCode, String streetAddress, Set<LeaderDiversityInfo> leaders) {
         this.dunsNumber = dunsNumber;
-        this.phone = phone;
+        this.dunsName = dunsName;
         this.county = county;
+        this.phone = phone;
         this.city = city;
         this.state = state;
         this.zipCode = zipCode;
+        this.streetAddress = streetAddress;
         this.leaders = leaders;
     }
 
@@ -109,6 +112,14 @@ public class CompanyDiversityInfo {
         this.leaders = leaders;
     }
 
+    public String getStreetAddress() {
+        return streetAddress;
+    }
+
+    public void setStreetAddress(String streetAddress) {
+        this.streetAddress = streetAddress;
+    }
+
     @Override
     public String toString() {
         return "CompanyDiversityInfo{" +
@@ -120,6 +131,7 @@ public class CompanyDiversityInfo {
                 ", city='" + city + '\'' +
                 ", state='" + state + '\'' +
                 ", zipCode='" + zipCode + '\'' +
+                ", streetAddress='" + streetAddress + '\'' +
                 ", leaders=" + leaders +
                 '}';
     }

@@ -17,13 +17,14 @@ public class CompanyDiversityInfoDto
     private String city;
     private String state;
     private String zipCode;
+
+    private String streetAddress;
     private Set<LeaderDiversityInfo> leaders;
 
     public CompanyDiversityInfoDto() {
     }
 
-    public CompanyDiversityInfoDto(Long id, String dunsName, String dunsNumber, String county, String phone, String city, String state, String zipCode, Set<LeaderDiversityInfo> leaders) {
-        this.id = id;
+    public CompanyDiversityInfoDto(String dunsName, String dunsNumber, String county, String phone, String city, String state, String zipCode, String streetAddress, Set<LeaderDiversityInfo> leaders) {
         this.dunsName = dunsName;
         this.dunsNumber = dunsNumber;
         this.county = county;
@@ -31,6 +32,7 @@ public class CompanyDiversityInfoDto
         this.city = city;
         this.state = state;
         this.zipCode = zipCode;
+        this.streetAddress = streetAddress;
         this.leaders = leaders;
     }
 
@@ -58,12 +60,12 @@ public class CompanyDiversityInfoDto
         this.dunsNumber = dunsNumber;
     }
 
-    public Set<LeaderDiversityInfo> getLeaders() {
-        return leaders;
+    public String getCounty() {
+        return county;
     }
 
-    public void setLeaders(Set<LeaderDiversityInfo> leaders) {
-        this.leaders = leaders;
+    public void setCounty(String county) {
+        this.county = county;
     }
 
     public String getPhone() {
@@ -72,14 +74,6 @@ public class CompanyDiversityInfoDto
 
     public void setPhone(String phone) {
         this.phone = phone;
-    }
-
-    public String getCounty() {
-        return county;
-    }
-
-    public void setCounty(String county) {
-        this.county = county;
     }
 
     public String getCity() {
@@ -106,7 +100,21 @@ public class CompanyDiversityInfoDto
         this.zipCode = zipCode;
     }
 
+    public String getStreetAddress() {
+        return streetAddress;
+    }
 
+    public void setStreetAddress(String streetAddress) {
+        this.streetAddress = streetAddress;
+    }
+
+    public Set<LeaderDiversityInfo> getLeaders() {
+        return leaders;
+    }
+
+    public void setLeaders(Set<LeaderDiversityInfo> leaders) {
+        this.leaders = leaders;
+    }
 
     @Override
     public String toString() {
@@ -119,8 +127,8 @@ public class CompanyDiversityInfoDto
                 ", city='" + city + '\'' +
                 ", state='" + state + '\'' +
                 ", zipCode='" + zipCode + '\'' +
+                ", streetAddress='" + streetAddress + '\'' +
                 ", leaders=" + leaders +
                 '}';
     }
-
 }

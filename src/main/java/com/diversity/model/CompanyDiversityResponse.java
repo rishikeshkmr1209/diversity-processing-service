@@ -1,5 +1,9 @@
 package com.diversity.model;
 
+import com.diversity.entity.LeaderDiversityInfo;
+
+import java.util.Set;
+
 public class CompanyDiversityResponse {
 
     private Long id;
@@ -10,6 +14,7 @@ public class CompanyDiversityResponse {
     private String city;
     private String state;
     private String zipCode;
+    private String streetAddress;
 
     private String isWomenOwned;
     private String isMinorityOwned;
@@ -18,11 +23,14 @@ public class CompanyDiversityResponse {
     private String isDisabledOwned;
     private String isLgbtOwned;
 
-    private StatusMessage statusMessage;
-    public CompanyDiversityResponse(){}
+    private Set<LeaderDiversityInfo> leaders;
 
-    public CompanyDiversityResponse(Long id, String dunsName, String dunsNumber, String county, String phone, String city, String state, String zipCode, String isWomenOwned, String isMinorityOwned, String minorityDescription, String isVeteranOwned, String isDisabledOwned, String isLgbtOwned, StatusMessage statusMessage) {
-        this.id = id;
+    private StatusMessage statusMessage;
+
+    public CompanyDiversityResponse() {
+    }
+
+    public CompanyDiversityResponse(String dunsName, String dunsNumber, String county, String phone, String city, String state, String zipCode, String streetAddress, String isWomenOwned, String isMinorityOwned, String minorityDescription, String isVeteranOwned, String isDisabledOwned, String isLgbtOwned, Set<LeaderDiversityInfo> leaders, StatusMessage statusMessage) {
         this.dunsName = dunsName;
         this.dunsNumber = dunsNumber;
         this.county = county;
@@ -30,12 +38,14 @@ public class CompanyDiversityResponse {
         this.city = city;
         this.state = state;
         this.zipCode = zipCode;
+        this.streetAddress = streetAddress;
         this.isWomenOwned = isWomenOwned;
         this.isMinorityOwned = isMinorityOwned;
         this.minorityDescription = minorityDescription;
         this.isVeteranOwned = isVeteranOwned;
         this.isDisabledOwned = isDisabledOwned;
         this.isLgbtOwned = isLgbtOwned;
+        this.leaders = leaders;
         this.statusMessage = statusMessage;
     }
 
@@ -157,5 +167,44 @@ public class CompanyDiversityResponse {
 
     public void setStatusMessage(StatusMessage statusMessage) {
         this.statusMessage = statusMessage;
+    }
+
+    public String getStreetAddress() {
+        return streetAddress;
+    }
+
+    public void setStreetAddress(String streetAddress) {
+        this.streetAddress = streetAddress;
+    }
+
+    public Set<LeaderDiversityInfo> getLeaders() {
+        return leaders;
+    }
+
+    public void setLeaders(Set<LeaderDiversityInfo> leaders) {
+        this.leaders = leaders;
+    }
+
+    @Override
+    public String toString() {
+        return "CompanyDiversityResponse{" +
+                "id=" + id +
+                ", dunsName='" + dunsName + '\'' +
+                ", dunsNumber='" + dunsNumber + '\'' +
+                ", county='" + county + '\'' +
+                ", phone='" + phone + '\'' +
+                ", city='" + city + '\'' +
+                ", state='" + state + '\'' +
+                ", zipCode='" + zipCode + '\'' +
+                ", streetAddress='" + streetAddress + '\'' +
+                ", isWomenOwned='" + isWomenOwned + '\'' +
+                ", isMinorityOwned='" + isMinorityOwned + '\'' +
+                ", minorityDescription='" + minorityDescription + '\'' +
+                ", isVeteranOwned='" + isVeteranOwned + '\'' +
+                ", isDisabledOwned='" + isDisabledOwned + '\'' +
+                ", isLgbtOwned='" + isLgbtOwned + '\'' +
+                ", leaders=" + leaders +
+                ", statusMessage=" + statusMessage +
+                '}';
     }
 }
