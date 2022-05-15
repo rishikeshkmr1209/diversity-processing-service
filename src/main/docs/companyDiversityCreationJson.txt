@@ -1,30 +1,40 @@
 {
   "city": "Hyderabad",
   "county": "India",
-  "dunsName": "199",
-  "dunsNumber": "Tech Mahindra",
+  "dunsName": "Infosys",
+  "dunsNumber": "200",
   "id": 0,
   "leaders": [
     {
       "isDisable": "No",
       "ethnicity": "Asian",
-      "gender": "Male",
-      "isLgbt": "No",
-      "name": "Sumit",
+      "gender": "Female",
+      "isLgbt": "YES",
+      "name": "Malina",
       "sharePercentage": 65,
-      "isVeteran": "No"
+      "isVeteran": "YES"
     },
 {
       "isDisable": "No",
-      "ethnicity": "Asian",
+      "ethnicity": "African",
       "gender": "Male",
-      "isLgbt": "No",
-      "name": "Visakh",
+      "isLgbt": "YES",
+      "name": "Ramu",
       "sharePercentage": 21,
-      "isVeteran": "No"
+      "isVeteran": "YES"
+    },
+	{
+      "isDisable": "Yes",
+      "ethnicity": "American",
+      "gender": "Female",
+      "isLgbt": "YES",
+      "name": "Catherine",
+      "sharePercentage": 0,
+      "isVeteran": "YES"
     }
   ],
-  "phone": "8766098",
+  "phone": "876655",
   "state": "Telangana",
+  "streetAddress": "Bangalore Highway",
   "zipCode": "500034"
 }
