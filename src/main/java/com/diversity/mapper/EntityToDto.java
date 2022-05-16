@@ -38,6 +38,9 @@ public class EntityToDto {
             if (null != companyDiversityInfo.getZipCode()) {
                 companyDiversityInfoDto.setZipCode(companyDiversityInfo.getZipCode());
             }
+            if(null!=companyDiversityInfo.getStreetAddress()){
+                companyDiversityInfoDto.setStreetAddress(companyDiversityInfo.getStreetAddress());
+            }
             if (null != companyDiversityInfo.getLeaders()) {
                 companyDiversityInfoDto.setLeaders(companyDiversityInfo.getLeaders());
             }
@@ -82,6 +85,9 @@ public class EntityToDto {
             if (null != companyDiversityInfo.getZipCode()) {
                 companyDiversityInfoDto.setZipCode(companyDiversityInfo.getZipCode());
             }
+            if(null!=companyDiversityInfo.getStreetAddress()){
+                companyDiversityInfoDto.setStreetAddress(companyDiversityInfo.getStreetAddress());
+            }
         }
         return companyDiversityInfoDto;
     }
@@ -106,6 +112,7 @@ public class EntityToDto {
             leaderDto.setIsLgbt(diversityLeaderInfo.getIsLgbt());
             leaderDto.setIsVeteran(diversityLeaderInfo.getIsVeteran());
             leaderDto.setSharePercentage(diversityLeaderInfo.getSharePercentage());
+            //leaderDto.setCompanyId(diversityLeaderInfo.getCompany());
 
             diversityLeadersDtos.add(leaderDto);
 
@@ -132,6 +139,8 @@ public class EntityToDto {
             leaderDiversityInfoDto.setIsLgbt(diversityLeaderInfo.getIsLgbt());
             leaderDiversityInfoDto.setIsVeteran(diversityLeaderInfo.getIsVeteran());
             leaderDiversityInfoDto.setSharePercentage(diversityLeaderInfo.getSharePercentage());
+            //leaderDiversityInfoDto.setCompanyId(diversityLeaderInfo.getCompanyId());
+
 
         }
         return leaderDiversityInfoDto;

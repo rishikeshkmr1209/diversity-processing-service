@@ -88,7 +88,7 @@ public class ServiceHelper {
 
                         if (leaderDiversityInfo.getSharePercentage() > 50) {
 
-                            if (!isWomenOwned && null != leaderDiversityInfo.getGender() && leaderDiversityInfo.getGender().equalsIgnoreCase("Female")) {
+                            if (!isWomenOwned && null != leaderDiversityInfo.getGender() && leaderDiversityInfo.getGender().equalsIgnoreCase("F")) {
                                 isWomenOwned = true;
                                 companyDiversityResponse.setIsWomenOwned(DiversityConstants.YES);
                             }

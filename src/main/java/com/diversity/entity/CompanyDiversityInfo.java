@@ -1,6 +1,5 @@
 package com.diversity.entity;
 
-import com.fasterxml.jackson.annotation.JsonManagedReference;
 
 import javax.persistence.*;
 import java.util.Set;

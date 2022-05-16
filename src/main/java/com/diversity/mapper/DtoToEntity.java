@@ -13,6 +13,7 @@ import java.util.Set;
 public class DtoToEntity {
 
     Logger logger = LoggerFactory.getLogger(DtoToEntity.class);
+
     public static LeaderDiversityInfo mapLeaderDiversityInfoDtoToEntity(LeaderDiversityInfoDto leaderDiversityInfoDto) {
         LeaderDiversityInfo leaderDiversityInfo = new LeaderDiversityInfo();
         leaderDiversityInfo.setName(leaderDiversityInfoDto.getName());
@@ -55,15 +56,18 @@ public class DtoToEntity {
             if (null != companyDiversityInfoDto.getZipCode()) {
                 companyDiversityInfo.setZipCode(companyDiversityInfoDto.getZipCode());
             }
+            if (null != companyDiversityInfoDto.getStreetAddress()) {
+                companyDiversityInfo.setStreetAddress(companyDiversityInfoDto.getStreetAddress());
+            }
             if (null != companyDiversityInfoDto.getLeaders()) {
-                companyDiversityInfo.setLeaders(companyDiversityInfoDto.getLeaders());
 
 
-               /* Set<LeaderDiversityInfo> leaders= companyDiversityInfo.getLeaders();
+/*                Set<LeaderDiversityInfo> leaders= companyDiversityInfo.getLeaders();
                 for (LeaderDiversityInfo leader:leaders){
                     leader.setCompany(companyDiversityInfo);
 
                 }*/
+                companyDiversityInfo.setLeaders(companyDiversityInfoDto.getLeaders());
 
             }
 

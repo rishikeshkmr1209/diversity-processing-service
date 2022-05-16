@@ -49,11 +49,22 @@ public class LeaderDiversityService {
         return EntityToDto.mapListLeaderDiversityEntityToDto(diversityLeaders);
     }
 
+    public List<LeaderDiversityInfoDto> getAllDiversityLeadersInclusingCompnayId() {
+        var leaderDiversityIterable = leaderDiversityInfoRepository.findAll();
+        List<LeaderDiversityInfo> diversityLeaders = StreamSupport.stream(leaderDiversityIterable.spliterator(), false).collect(Collectors.toList());
+
+        if (diversityLeaders.isEmpty())
+            throw new RecordNotFoundException(Constants.MSG_RECORD_NOT_FOUND);
+
+        return EntityToDto.mapListLeaderDiversityEntityToDto(diversityLeaders);
+    }
+
     public List<LeaderDiversityInfoDto> getAllDiversityLeadersUsingCompanyId(String companyId) {
         List<LeaderDiversityInfo> diversityLeaders = leaderDiversityInfoRepository.findLeadersUsingCompanyId(Integer.parseInt(companyId));
         if (diversityLeaders.isEmpty())
             throw new RecordNotFoundException(Constants.MSG_RECORD_NOT_FOUND);
         return EntityToDto.mapListLeaderDiversityEntityToDto(diversityLeaders);
     }
+
 
 }
