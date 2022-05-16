@@ -21,8 +21,8 @@ jobs:
         with:
           java-version: '11'
 
-      - name: Build with Gradle
-        run: gradlew.bat clean build
+      - name: Build with Maven
+        run: mvn clean install
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v2
@@ -49,5 +49,5 @@ jobs:
         with:
           app-name: 'diversity-backend-service'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_FFF5477FEFCA42A39BD6C96688CECE25 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_1FEB22B20BCA414AB6A342F821BEE85E }}
           package: '*.jar'
