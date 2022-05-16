@@ -1,0 +1,40 @@
+{
+  "city": "Hyderabad",
+  "county": "India",
+  "dunsName": "Infosys",
+  "dunsNumber": "200",
+  "id": 0,
+  "leaders": [
+    {
+      "isDisable": "No",
+      "ethnicity": "Asian",
+      "gender": "Female",
+      "isLgbt": "YES",
+      "name": "Malina",
+      "sharePercentage": 65,
+      "isVeteran": "YES"
+    },
+{
+      "isDisable": "No",
+      "ethnicity": "African",
+      "gender": "Male",
+      "isLgbt": "YES",
+      "name": "Ramu",
+      "sharePercentage": 21,
+      "isVeteran": "YES"
+    },
+	{
+      "isDisable": "Yes",
+      "ethnicity": "American",
+      "gender": "Female",
+      "isLgbt": "YES",
+      "name": "Catherine",
+      "sharePercentage": 0,
+      "isVeteran": "YES"
+    }
+  ],
+  "phone": "876655",
+  "state": "Telangana",
+  "streetAddress": "Bangalore Highway",
+  "zipCode": "500034"
+}

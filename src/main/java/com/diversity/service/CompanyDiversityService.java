@@ -28,9 +28,6 @@ public class CompanyDiversityService {
     Logger logger = LoggerFactory.getLogger(CompanyDiversityService.class);
 
     @Autowired
-    private LeaderDiversityInfoRepository leaderDiversityInfoRepository;
-
-    @Autowired
     private CompanyDiversityInfoRepository companyDiversityInfoRepository;
 
     public void updateCompanyDiversityInformation(CompanyDiversityInfoDto companyDiversityInfoDto) {
