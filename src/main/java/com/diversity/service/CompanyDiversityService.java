@@ -47,14 +47,14 @@ public class CompanyDiversityService {
     }
 
     public CompanyDiversityInfoDto getCompanyByName(String dunsName) {
-        CompanyDiversityInfo companyDiversityInfo = companyDiversityInfoRepository.findByDunsName(dunsName);
+        CompanyDiversityInfo companyDiversityInfo = companyDiversityInfoRepository.findByDunsNameContainingIgnoreCase(dunsName);
         if (companyDiversityInfo == null)
             throw new RecordNotFoundException(Constants.MSG_RECORD_NOT_FOUND);
         return EntityToDto.mapCompanyDiversityEntityToDto(companyDiversityInfo);
     }
 
     public CompanyDiversityResponse getCompanyByDunsName(String dunsName) {
-        CompanyDiversityInfo companyDiversityInfo = companyDiversityInfoRepository.findByDunsName(dunsName);
+        CompanyDiversityInfo companyDiversityInfo = companyDiversityInfoRepository.findByDunsNameContainingIgnoreCase(dunsName);
         if (companyDiversityInfo == null)
             throw new RecordNotFoundException(Constants.MSG_RECORD_NOT_FOUND);
 

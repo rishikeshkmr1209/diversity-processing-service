@@ -22,7 +22,7 @@ INSERT INTO TBL_DIV_LEADER
                             "ABC Technologies",
                             1234567890,
                             "gwenn.m@abc.com",
-                            "F",
+                            "1",
                             "British",
                             "Christainity",
                             "white",

@@ -46,7 +46,7 @@ public class CompanyDiversityServiceTests {
         CompanyDiversityInfo companyDiversityInfo = objectMapper.readValue(input, CompanyDiversityInfo.class);
 
         String dunsName = companyDiversityInfo.getDunsName();
-        Mockito.when(companyDiversityInfoRepository.findByDunsName(dunsName)).thenReturn(companyDiversityInfo);
+        Mockito.when(companyDiversityInfoRepository.findByDunsNameContainingIgnoreCase(dunsName)).thenReturn(companyDiversityInfo);
 
         CompanyDiversityInfoDto companyDiversityInfoDto = companyDiversityService.getCompanyByName(dunsName);
         then(companyDiversityInfoDto.getCity()).isEqualTo(companyDiversityInfo.getCity());

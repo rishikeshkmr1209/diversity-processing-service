@@ -3,7 +3,7 @@
     {
       "isDisable": "No",
       "ethnicity": "Asian",
-      "gender": "F",
+      "gender": "1",
       "isLgbt": "YES",
       "name": "Malina",
       "sharePercentage": 65,
@@ -21,7 +21,7 @@
     {
       "isDisable": "Yes",
       "ethnicity": "American",
-      "gender": "F",
+      "gender": "1",
       "isLgbt": "YES",
       "name": "Catherine",
       "sharePercentage": 0,

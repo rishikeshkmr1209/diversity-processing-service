@@ -61,12 +61,6 @@ public class DtoToEntity {
             }
             if (null != companyDiversityInfoDto.getLeaders()) {
 
-
-/*                Set<LeaderDiversityInfo> leaders= companyDiversityInfo.getLeaders();
-                for (LeaderDiversityInfo leader:leaders){
-                    leader.setCompany(companyDiversityInfo);
-
-                }*/
                 companyDiversityInfo.setLeaders(companyDiversityInfoDto.getLeaders());
 
             }
