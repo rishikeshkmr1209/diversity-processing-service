@@ -13,4 +13,5 @@ public class DiversityConstants {
     public static final String ASIAN_PACIFIC_AMERICANS ="Asian-Pacific Americans";
     public static final String ASIAN_INDIAN_AMERICANS ="Asian-Indian Americans";
 
+    public static final String FEMALE = "1";
 }
